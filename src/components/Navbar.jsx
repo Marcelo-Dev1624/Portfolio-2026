@@ -50,7 +50,7 @@ export default function Navbar() {
   return (
     <>
       {/* Desktop navbar */}
-      <nav className="desktop-nav">
+      <div className="desktop-nav">
         <div className={`inner-nav${isScrolled ? ' scrolled' : ''}`}>
           <a className="nav-logo" onClick={() => handleClick(NAV_ITEMS[0])} style={{ cursor: 'pointer' }}>
             <img src="/images/logo_completo_blanco.png" alt="MarceloDev" />
@@ -73,10 +73,10 @@ export default function Navbar() {
             </ul>
           </div>
         </div>
-      </nav>
+      </div>
 
       {/* Mobile bottom nav */}
-      <nav className="mobile-bottom-nav">
+      <div className="mobile-bottom-nav">
         {NAV_ITEMS.map((item) => (
           <a
             key={item.id}
@@ -87,7 +87,7 @@ export default function Navbar() {
             <span>{item.label}</span>
           </a>
         ))}
-      </nav>
+      </div>
     </>
   )
 }
