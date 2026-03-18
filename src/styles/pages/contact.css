@@ -177,18 +177,16 @@
 /* Mobile */
 @media only screen and (max-width: 767px) {
   .contact-v2-section {
-    padding: 5rem 1.5rem 3rem;
+    padding: 7rem 0 3rem;
     gap: 2rem;
-    justify-content: flex-start;
   }
 
-  .contact-v2-header {
-    width: 100%;
-    padding-top: 2rem;
+  .contact-v2-header,
+  .contact-v2-body {
+    width: 90%;
   }
 
   .contact-v2-body {
-    width: 100%;
     flex-direction: column;
     gap: 2rem;
   }
