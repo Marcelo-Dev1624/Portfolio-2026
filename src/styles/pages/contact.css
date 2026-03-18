@@ -177,7 +177,7 @@
 /* Mobile */
 @media only screen and (max-width: 767px) {
   .contact-v2-section {
-    padding: 7rem 0 3rem;
+    padding: 6.5rem 0 3rem !important;
     gap: 2rem;
   }
 
@@ -190,6 +190,10 @@
     flex-direction: column;
     gap: 2rem;
   }
+
+  .contact-v2-form {
+  width: 100% !important;
+}
 
   .contact-v2-row {
     flex-direction: column;

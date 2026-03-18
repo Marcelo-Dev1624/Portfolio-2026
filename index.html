@@ -31,6 +31,13 @@
 
     <title>MarceloDev</title>
 
+    <!-- Hide BMC widget on mobile -->
+    <style>
+      @media only screen and (max-width: 820px) {
+        #bmc-wbtn { display: none !important; }
+      }
+    </style>
+
     <!-- Poppins font -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -39,7 +46,7 @@
     <!-- Font Awesome -->
     <script src="https://kit.fontawesome.com/0003ddee2d.js" crossorigin="anonymous"></script>
 
-    <!-- Tailwind CDN (same as original) -->
+    <!-- Tailwind CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
   </head>
   <body class="dark-mode overflow-x-hidden">

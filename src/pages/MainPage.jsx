@@ -1,6 +1,7 @@
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
 import LoadingAnimation from '../components/LoadingAnimation'
+import MobileLogo from '../components/MobileLogo'
 import HomeSection from '../components/sections/HomeSection'
 import AboutSection from '../components/sections/AboutSection'
 import SkillsSection from '../components/sections/SkillsSection'
@@ -11,6 +12,7 @@ export default function MainPage() {
     <>
       <LoadingAnimation />
       <Navbar />
+      <MobileLogo />
       <div className="sections-mv-container">
         <HomeSection />
         <AboutSection />

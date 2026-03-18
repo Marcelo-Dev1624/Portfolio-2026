@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
+import MobileLogo from '../components/MobileLogo'
 
 export default function ContactPage() {
   const [copied, setCopied] = useState(false)
@@ -15,6 +16,7 @@ export default function ContactPage() {
   return (
     <>
       <Navbar />
+      <MobileLogo />
 
       <section className="contact-v2-section" id="Contact">
 

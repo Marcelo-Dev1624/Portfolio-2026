@@ -2,9 +2,9 @@ import { useScrollAnimation } from '../../hooks/useScrollAnimation'
 import { useNavigate } from 'react-router-dom'
 
 const stats = [
-  { value: '3+', label: 'Years coding' },
+  { value: '4+', label: 'Years coding' },
   { value: '5+', label: 'Projects built' },
-  { value: '1',  label: 'Happy client' },
+  { value: '5+',  label: 'Happy client' },
 ]
 
 export default function AboutSection() {

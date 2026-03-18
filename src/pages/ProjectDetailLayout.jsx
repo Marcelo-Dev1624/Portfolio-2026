@@ -1,14 +1,12 @@
 import { Link } from 'react-router-dom'
 import Footer from '../components/Footer'
+import MobileLogo from '../components/MobileLogo'
 
-/**
- * Reusable layout for project detail pages.
- * Replaces the custom navbar + project-detailed structure from the HTML pages.
- */
 export default function ProjectDetailLayout({ title, technologies, children }) {
   return (
     <>
-      {/* Minimal navbar for project pages */}
+      <MobileLogo />
+
       <div className="navbar">
         <div className="inner-navbar">
           <div className="logo">
@@ -23,7 +21,6 @@ export default function ProjectDetailLayout({ title, technologies, children }) {
       </div>
 
       <div className="project-detailed">
-        {/* Header */}
         <div className="header">
           <h1 className="header-text-3">{title}</h1>
           <div className="technologies-block">
@@ -32,8 +29,6 @@ export default function ProjectDetailLayout({ title, technologies, children }) {
             ))}
           </div>
         </div>
-
-        {/* Body content injected by each project page */}
         <div className="project-body">{children}</div>
       </div>
 

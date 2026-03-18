@@ -1,5 +1,6 @@
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
+import MobileLogo from '../components/MobileLogo'
 import ProjectCard from '../components/ProjectCard'
 import { allProjects } from '../data/projects'
 
@@ -7,6 +8,7 @@ export default function ProjectsPage() {
   return (
     <>
       <Navbar />
+      <MobileLogo />
 
       <section
         className="section px-4 pt-20 xl:pt-44 flex-col justify-center items-center"
