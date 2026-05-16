@@ -24,7 +24,15 @@ jobs:
       - name: Build
         run: npm run build
 
-      - name: Deploy frontend (dist) to Hostinger
+      - name: Bundle API into dist
+        run: |
+          mkdir -p ./dist/api
+          cp -R ./api/. ./dist/api/
+          # Remove files that should not be deployed
+          rm -f ./dist/api/.gitignore
+          rm -f ./dist/api/config.php
+
+      - name: Deploy to Hostinger
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
           server: ${{ secrets.FTP_SERVER }}
@@ -33,18 +41,6 @@ jobs:
           local-dir: ./dist/
           server-dir: /public_html/
           exclude: |
-            **/api/**
-
-      - name: Deploy API (PHP endpoint) to Hostinger
-        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
-        with:
-          server: ${{ secrets.FTP_SERVER }}
-          username: ${{ secrets.FTP_USERNAME }}
-          password: ${{ secrets.FTP_PASSWORD }}
-          local-dir: ./api/
-          server-dir: /public_html/api/
-          exclude: |
-            **/config.php
-            **/.gitignore
+            **/api/config.php
             **/.git*
             **/.DS_Store
