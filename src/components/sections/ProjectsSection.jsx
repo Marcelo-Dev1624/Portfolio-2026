@@ -1,30 +1,31 @@
 import { Link } from 'react-router-dom'
-import { useScrollAnimation } from '../../hooks/useScrollAnimation'
+import Reveal from '../Reveal'
 import ProjectCard from '../ProjectCard'
 import { featuredProjects } from '../../data/projects'
 
 export default function ProjectsSection() {
-  const ref = useScrollAnimation()
-
   return (
     <section
-      ref={ref}
-      className="section elements-animation-hidden px-4 py-10 flex-col justify-center items-center"
+      className="section px-4 py-10 flex-col justify-center items-center"
       id="Projects"
     >
-      <h1 className="header-text-2 accent">¡Featured Projects!</h1>
+      <Reveal as="h1" className="header-text-2 accent">¡Featured Projects!</Reveal>
 
-      {featuredProjects.map((project) => (
-        <ProjectCard key={project.id} project={project} />
+      {featuredProjects.map((project, i) => (
+        <Reveal key={project.id} index={i + 1} style={{ width: '100%', display: 'flex', justifyContent: 'center' }}>
+          <ProjectCard project={project} />
+        </Reveal>
       ))}
 
-      <Link
-        to="/projects"
-        id="more-projects-btn"
-        className="btn accent glassmorphism rounded outlined-accent my-12"
-      >
-        See more
-      </Link>
+      <Reveal index={featuredProjects.length + 1}>
+        <Link
+          to="/projects"
+          id="more-projects-btn"
+          className="btn accent glassmorphism rounded outlined-accent my-12"
+        >
+          See more
+        </Link>
+      </Reveal>
     </section>
   )
 }
