@@ -1,42 +1,56 @@
-import { useScrollAnimation } from '../hooks/useScrollAnimation'
-
 export default function Footer() {
-  const ref = useScrollAnimation()
-
   return (
-    <div id="footer" ref={ref} className="footer elements-animation-hidden glassmorphism">
-      <div className="footer-logo">
-        <img src="/images/logo_completo_blanco.png" alt="MarceloDev" />
-      </div>
-      <div className="footer-body">
+    <footer id="footer" className="footer">
+      <div className="footer-inner">
+
+        <div className="footer-brand">
+          <img src="/images/logo_completo_blanco.png" alt="MarceloDev" />
+          <p className="footer-tagline mv-text">
+            Building things that <span className="accent">look great</span> and <span className="accent">work great.</span>
+          </p>
+        </div>
+
         <div className="footer-col">
-          <h2 className="mv-h1 accent">My Socials</h2>
-          <ul>
+          <h2 className="footer-col-title accent">My Socials</h2>
+          <ul className="footer-links">
             <li>
               <a href="https://github.com/marcelo-dev1624" target="_blank" rel="noreferrer">
-                <i className="fab fa-github mx-1" />Github
+                <i className="fab fa-github" />
+                <span>Github</span>
               </a>
             </li>
-            <div className="line" />
             <li>
               <a href="https://instagram.com/marcelo.v1624" target="_blank" rel="noreferrer">
-                <i className="fab fa-instagram mx-1" />Instagram
+                <i className="fab fa-instagram" />
+                <span>Instagram</span>
               </a>
             </li>
-            <div className="line" />
             <li>
               <a href="https://www.linkedin.com/in/marcelo-villalobos-400965244/" target="_blank" rel="noreferrer">
-                <i className="fab fa-linkedin mx-1" />LinkedIn
+                <i className="fab fa-linkedin" />
+                <span>LinkedIn</span>
               </a>
             </li>
           </ul>
         </div>
+
         <div className="footer-col">
-          <h1 className="mv-h1 accent">Wanna work together?</h1>
-          <a href="/contact" className="btn glassmorphism mo accent">¡Contact Me!</a>
-          <p className="footer-copyright mv-text">Copyright, 2025 - San Jose, Costa Rica</p>
+          <h2 className="footer-col-title accent">Wanna work together?</h2>
+          <p className="footer-col-text mv-text">
+            Open to clients, collaborations and new ideas.
+          </p>
+          <a href="/contact" className="btn glassmorphism accent outlined-accent footer-cta">
+            ¡Contact Me!
+          </a>
         </div>
+
       </div>
-    </div>
+
+      <div className="footer-bottom">
+        <p className="footer-copyright">
+          © 2025 · Marcelo Villalobos · San Jose, Costa Rica
+        </p>
+      </div>
+    </footer>
   )
 }

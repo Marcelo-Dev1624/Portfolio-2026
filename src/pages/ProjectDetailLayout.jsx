@@ -1,8 +1,12 @@
+import { Children } from 'react'
 import { Link } from 'react-router-dom'
 import Footer from '../components/Footer'
 import MobileLogo from '../components/MobileLogo'
+import Reveal from '../components/Reveal'
 
 export default function ProjectDetailLayout({ title, technologies, children }) {
+  const blocks = Children.toArray(children)
+
   return (
     <>
       <MobileLogo />
@@ -21,15 +25,21 @@ export default function ProjectDetailLayout({ title, technologies, children }) {
       </div>
 
       <div className="project-detailed">
-        <div className="header">
+        <Reveal className="header">
           <h1 className="header-text-3">{title}</h1>
           <div className="technologies-block">
             {technologies.map((tech) => (
               <img key={tech.alt} src={tech.src} alt={tech.alt} />
             ))}
           </div>
+        </Reveal>
+        <div className="project-body">
+          {blocks.map((block, i) => (
+            <Reveal key={i} index={i + 1}>
+              {block}
+            </Reveal>
+          ))}
         </div>
-        <div className="project-body">{children}</div>
       </div>
 
       <Footer />

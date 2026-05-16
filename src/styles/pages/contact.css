@@ -68,6 +68,33 @@
   display: inline-flex;
   align-items: center;
   margin-top: 0.5rem;
+  transition: opacity var(--transition-fast);
+}
+
+.contact-v2-submit:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.contact-v2-feedback {
+  margin: 0;
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  line-height: 1.4;
+  text-align: left;
+}
+
+.contact-v2-feedback-success {
+  color: var(--accent-color);
+  background-color: rgba(77, 226, 151, 0.1);
+  border: 1px solid rgba(77, 226, 151, 0.35);
+}
+
+.contact-v2-feedback-error {
+  color: #ff8a8a;
+  background-color: rgba(255, 138, 138, 0.08);
+  border: 1px solid rgba(255, 138, 138, 0.3);
 }
 
 /* Form input contrast */

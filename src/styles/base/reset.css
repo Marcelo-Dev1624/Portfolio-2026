@@ -12,6 +12,7 @@ body {
   font-family: var(--font-family-primary);
   color: var(--color-secondary-100);
   transition: var(--transition-normal);
+  overflow-x: clip;
 }
 
 span {
