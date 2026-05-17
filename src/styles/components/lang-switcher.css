@@ -47,23 +47,16 @@
   transform: scale(0.95);
 }
 
-/* Mobile — centered under the floating logo island at the top */
+/* Mobile — same top-right corner as desktop, just a touch smaller.
+   The MobileLogo island floats centered at the top, the close-X (on project
+   pages) sits at the navbar's right edge a few px down, and the lang
+   switcher anchors here at top:16, right:16 — none collide. */
 @media only screen and (max-width: 820px) {
   .lang-switcher {
-    top: 60px;
-    right: auto;
-    left: 50%;
-    transform: translateX(-50%);
+    top: 16px;
+    right: 16px;
     width: 38px;
     height: 38px;
     font-size: 0.7rem;
-  }
-
-  .lang-switcher:hover {
-    transform: translateX(-50%) scale(1.08);
-  }
-
-  .lang-switcher:active {
-    transform: translateX(-50%) scale(0.95);
   }
 }
