@@ -6,7 +6,7 @@ export const featuredProjects = [
     id: 'puntus',
     title: 'Puntus — Loyalty Platform',
     style: 'style-1',
-    image: '/images/projects-covers/puntus.png',
+    image: '/images/projects-covers/puntus-org.jpg',
     technologies: [
       { src: '/images/technologies/react.png', alt: 'React' },
       { src: '/images/technologies/js.png', alt: 'JavaScript' },
@@ -14,15 +14,16 @@ export const featuredProjects = [
     ],
     description: (
       <>
-        I'm <span className="accent">co-founder</span> of{' '}
-        <span className="accent">Puntus</span>, a SaaS loyalty platform helping Latin American
-        businesses run their own digital points-and-rewards programs — accessible directly from{' '}
+        <span className="accent">Co-founder &amp; developer</span> of{' '}
+        <span className="accent">Puntus</span> — a SaaS loyalty platform helping Latin American
+        businesses run their own digital points-and-rewards programs, accessible directly from{' '}
         <span className="accent">Apple Wallet</span> and{' '}
-        <span className="accent">Google Wallet</span>, no extra app needed.
+        <span className="accent">Google Wallet</span> with no extra app required.
         <br /><br />
-        Behind the scenes: a no-code rule engine, real-time analytics, multi-tenant cloud
-        infrastructure with <span className="accent">AES-256</span> encryption, and POS
-        integrations. Live in production, helping small businesses retain customers.
+        Involved <span className="accent">end-to-end</span>: product decisions, architecture,
+        and writing the code that powers the no-code rule engine, real-time analytics, and a
+        multi-tenant cloud setup with <span className="accent">AES-256</span> encryption. Live
+        in production today.
       </>
     ),
     link: '/projects/puntus',

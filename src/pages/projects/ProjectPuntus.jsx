@@ -10,38 +10,42 @@ export default function ProjectPuntus() {
   return (
     <ProjectDetailLayout title="Puntus — Loyalty Platform" technologies={technologies}>
       <div className="image-and-description">
-        <img src="/images/projects-covers/puntus.png" alt="Puntus" />
+        <img src="/images/projects-covers/puntus-org.jpg" alt="Puntus" />
         <div className="line-vertical"></div>
         <div className="text-body">
-          <h1 className="header-text-4">What's Puntus?</h1>
+          <h1 className="header-text-4">My biggest project to date</h1>
           <p className="mv-text">
-            <span className="accent">Puntus</span> is a SaaS loyalty platform built for Latin
+            I'm <span className="accent">co-founder and developer</span> of{' '}
+            <span className="accent">Puntus</span> — a SaaS loyalty platform built for Latin
             American small and mid-sized businesses. We let merchants run their own digital{' '}
-            <span className="accent">points and rewards programs</span> in minutes — customers
-            access their cards directly from <span className="accent">Apple Wallet</span> or{' '}
-            <span className="accent">Google Wallet</span>, with no extra app to download.
+            <span className="accent">points and rewards programs</span> in minutes, with cards
+            customers access directly from <span className="accent">Apple Wallet</span> or{' '}
+            <span className="accent">Google Wallet</span> — no extra app to download.
             <br />
             <br />
-            I'm <span className="accent">co-founder</span> and part of the team driving the
-            product end to end — from architecture decisions to the customer-facing experience.
+            This is the project I'm most proud of: not just because of what it does, but
+            because I've been involved <span className="accent">end-to-end</span> — from the
+            initial idea and product decisions, all the way down to writing the code that
+            powers it in production.
           </p>
         </div>
       </div>
 
       <div className="description-and-video">
         <div className="text-body">
-          <h1 className="header-text-4">What's inside</h1>
+          <h1 className="header-text-4">What I built</h1>
           <p className="mv-text">
-            A multi-tenant cloud architecture with{' '}
+            On the engineering side, I worked on a{' '}
+            <span className="accent">multi-tenant cloud architecture</span> with{' '}
             <span className="accent">AES-256</span> encryption, a{' '}
             <span className="accent">no-code rule engine</span> that lets merchants define
-            point-earning and reward logic without touching code, real-time business analytics,
-            and integrations with popular POS systems in the region.
+            point-earning and reward logic without touching a single line of code, real-time
+            business analytics, and integrations with popular POS systems in the region.
             <br />
             <br />
-            Beyond tech, Puntus is about giving small businesses the same kind of fidelization
+            Beyond the tech, Puntus is about giving small businesses the same fidelization
             tools that big chains have — at a price they can actually afford and in their own
-            language.
+            language. Seeing it live, used by real merchants, is the most rewarding part.
           </p>
 
           <div className="mt-8 text-center">
