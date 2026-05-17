@@ -1,3 +1,4 @@
+import { Trans, useTranslation } from 'react-i18next'
 import ProjectDetailLayout from '../ProjectDetailLayout'
 
 const technologies = [
@@ -7,38 +8,25 @@ const technologies = [
 ]
 
 export default function ProjectCalorieCalculator() {
+  const { t } = useTranslation()
   return (
-    <ProjectDetailLayout title="Calorie Calculator" technologies={technologies}>
+    <ProjectDetailLayout title={t('projects.calorie-calculator.title')} technologies={technologies}>
       <div className="image-and-description">
-        <img src="/images/projects-covers/Calorie_Calculator.png" alt="Calorie Calculator" />
+        <img src="/images/projects-covers/Calorie_Calculator.png" alt={t('projects.calorie-calculator.title')} />
         <div className="line-vertical"></div>
         <div className="text-body">
-          <h1 className="header-text-4">What's this project about?</h1>
+          <h1 className="header-text-4">{t('projects.calorie-calculator.detail.heading1')}</h1>
           <p className="mv-text">
-            A simple app you can use to convert macronutrients, such as{' '}
-            <span className="accent">Carbs, Protein, Fat and Alcohol</span> to their equivalent
-            values in <span className="accent">Calories</span>.
-            <br />
-            <br />
-            This tool is perfect for anyone tracking their nutrition or learning about the caloric
-            content of different macronutrients. It provides quick and accurate conversions to help
-            users make informed dietary decisions.
+            <Trans i18nKey="projects.calorie-calculator.detail.body1" components={{ accent: <span className="accent" /> }} />
           </p>
         </div>
       </div>
 
       <div className="description-and-video">
         <div className="text-body">
-          <h1 className="header-text-4">Technical Features</h1>
+          <h1 className="header-text-4">{t('projects.calorie-calculator.detail.heading2')}</h1>
           <p className="mv-text">
-            Built with <span className="accent">React</span> for a dynamic and interactive user
-            experience, this calculator features real-time calculations and a clean, intuitive
-            interface. The app uses <span className="accent">Bootstrap</span> for responsive design
-            and <span className="accent">JavaScript</span> for the calculation logic.
-            <br />
-            <br />
-            The application includes input validation, instant results, and a user-friendly design
-            that makes nutrition tracking accessible to everyone.
+            <Trans i18nKey="projects.calorie-calculator.detail.body2" components={{ accent: <span className="accent" /> }} />
           </p>
 
           <div className="mt-8 text-center">
@@ -48,7 +36,7 @@ export default function ProjectCalorieCalculator() {
               rel="noreferrer"
               className="btn glassmorphism accent outlined-accent mv-h3 px-8"
             >
-              <i className="fas fa-external-link-alt mr-2"></i>Visit Live Project
+              <i className="fas fa-external-link-alt mr-2"></i>{t('projectDetail.visitLive')}
             </a>
           </div>
         </div>

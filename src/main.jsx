@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom/client'
 import { BrowserRouter } from 'react-router-dom'
 import App from './App.jsx'
 import ScrollToTop from './components/ScrollToTop.jsx'
+import './i18n' // initialize i18next before any component renders
 
 // Styles — imported individually so Vite's HMR can reload each file in isolation
 // Base
@@ -14,6 +15,7 @@ import './styles/base/utilities.css'
 import './styles/components/buttons.css'
 import './styles/components/navigation.css'
 import './styles/components/forms.css'
+import './styles/components/lang-switcher.css'
 // Layout
 import './styles/layout/footer.css'
 // Pages

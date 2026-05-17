@@ -1,11 +1,14 @@
+import { useTranslation } from 'react-i18next'
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
 import MobileLogo from '../components/MobileLogo'
 import ProjectCard from '../components/ProjectCard'
 import Reveal from '../components/Reveal'
-import { allProjects } from '../data/projects'
+import { featuredProjects, earlyProjects } from '../data/projects'
 
 export default function ProjectsPage() {
+  const { t } = useTranslation()
+
   return (
     <>
       <Navbar />
@@ -15,10 +18,30 @@ export default function ProjectsPage() {
         className="section px-4 pt-20 xl:pt-44 flex-col justify-center items-center"
         id="Projects"
       >
-        <Reveal as="h1" className="header-text-2 accent">¡Take a look at my work!</Reveal>
+        <Reveal as="h1" className="header-text-2 accent">{t('projectsSection.allTitle')}</Reveal>
 
-        {allProjects.map((project, i) => (
+        {featuredProjects.map((project, i) => (
           <Reveal key={project.id} index={i + 1} style={{ width: '100%', display: 'flex', justifyContent: 'center' }}>
+            <ProjectCard project={project} />
+          </Reveal>
+        ))}
+
+        {/* Early Work divider + section */}
+        <Reveal className="early-work-divider">
+          <span className="early-work-line" />
+          <div className="early-work-heading">
+            <h2 className="header-text-3 accent">{t('projectsSection.earlyTitle')}</h2>
+            <p className="mv-text early-work-subtitle">{t('projectsSection.earlySubtitle')}</p>
+          </div>
+          <span className="early-work-line" />
+        </Reveal>
+
+        {earlyProjects.map((project, i) => (
+          <Reveal
+            key={project.id}
+            index={i + 1}
+            style={{ width: '100%', display: 'flex', justifyContent: 'center' }}
+          >
             <ProjectCard project={project} />
           </Reveal>
         ))}

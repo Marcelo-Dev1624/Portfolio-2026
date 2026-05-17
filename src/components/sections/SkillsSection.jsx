@@ -1,3 +1,4 @@
+import { useTranslation } from "react-i18next";
 import { useScrollAnimation } from "../../hooks/useScrollAnimation";
 
 const skills = [
@@ -44,11 +45,12 @@ const track = [...skills, ...skills];
 
 export default function SkillsSection() {
   const ref = useScrollAnimation();
+  const { t } = useTranslation();
 
   return (
     <section ref={ref} id="Skills" className="elements-animation-hidden">
       <div className="px-6 mt-12 md:px-16 lg:px-24 xl:px-60 xl:py-2 xl:mt-0 text-center">
-        <h1 className="header-text-3 accent">My Skills</h1>
+        <h1 className="header-text-3 accent">{t('skills.title')}</h1>
         <div className="line my-6"></div>
       </div>
 

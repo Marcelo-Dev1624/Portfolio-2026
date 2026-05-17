@@ -1,0 +1,132 @@
+{
+  "nav": {
+    "home": "Inicio",
+    "about": "Sobre mí",
+    "projects": "Proyectos",
+    "contact": "Contacto"
+  },
+  "home": {
+    "greeting": "Hola",
+    "name": "Soy <accent>Marcelo</accent>",
+    "location": "San José, Costa Rica"
+  },
+  "about": {
+    "tag": "Desarrollador Full-Stack Junior",
+    "title": "Apasionado por construir cosas que <accent>se ven bien</accent> y <accent>funcionan bien.</accent>",
+    "bio": "Soy <accent>Marcelo Villalobos</accent>, vivo en Costa Rica y estoy terminando mi carrera en Ciencias de la Computación. Mi pasión está en el front-end y el diseño, pero cuando se trata de construir, voy de extremo a extremo.<br/><br/>Tengo experiencia real gracias a <accent>IDS</accent>, y este año estoy expandiéndome a proyectos colaborativos, apoyando productos de amigos, y tomando mis propios clientes.",
+    "stats": {
+      "years": "Años codeando",
+      "projects": "Proyectos construidos",
+      "clients": "Clientes felices"
+    },
+    "cta": "Contáctame"
+  },
+  "skills": {
+    "title": "Mis Skills"
+  },
+  "projectsSection": {
+    "featuredTitle": "¡Proyectos destacados!",
+    "allTitle": "¡Echa un vistazo a mi trabajo!",
+    "earlyTitle": "Trabajos iniciales",
+    "earlySubtitle": "Proyectos de cuando estaba aprendiendo — los dejo por la historia que cuentan.",
+    "viewMore": "Ver más",
+    "comingSoon": "Próximamente",
+    "seeMore": "Ver más"
+  },
+  "contact": {
+    "tag": "Hablemos",
+    "title": "Construyamos algo <accent>juntos.</accent>",
+    "subtitle": "¿Listo para darle vida a tu proyecto? Estoy abierto a clientes, colaboraciones y nuevas ideas.",
+    "form": {
+      "name": "Tu nombre",
+      "namePlaceholder": "Marcelo Villalobos",
+      "email": "Tu correo",
+      "emailPlaceholder": "hola@ejemplo.com",
+      "company": "Empresa / Organización",
+      "companyPlaceholder": "Nombre de tu empresa",
+      "message": "¿En qué puedo ayudarte?",
+      "messagePlaceholder": "Cuéntame sobre tu proyecto...",
+      "submit": "Enviar mensaje",
+      "sending": "Enviando…",
+      "sent": "Enviado ✓",
+      "successMsg": "¡Gracias! Tu mensaje va en camino. Te responderé pronto.",
+      "errorFallback": "Algo salió mal. Intenta de nuevo."
+    },
+    "aside": {
+      "emailLabel": "Correo",
+      "copied": "¡Copiado!",
+      "resumeLabel": "Currículum",
+      "downloadCV": "Descargar CV",
+      "socialsLabel": "Redes sociales"
+    }
+  },
+  "footer": {
+    "tagline": "Construyendo cosas que <accent>se ven bien</accent> y <accent>funcionan bien.</accent>",
+    "socialsTitle": "Mis redes",
+    "ctaTitle": "¿Quieres trabajar conmigo?",
+    "ctaText": "Abierto a clientes, colaboraciones y nuevas ideas.",
+    "cta": "¡Contáctame!",
+    "copyright": "© 2025 · Marcelo Villalobos · San José, Costa Rica"
+  },
+  "projectDetail": {
+    "visitLive": "Visitar proyecto en vivo",
+    "visitPuntus": "Visitar Puntus"
+  },
+  "projects": {
+    "puntus": {
+      "title": "Puntus — Plataforma de Lealtad",
+      "cardDescription": "<accent>Co-fundador y desarrollador</accent> de <accent>Puntus</accent> — una plataforma SaaS de lealtad que ayuda a negocios de Latinoamérica a tener su propio programa digital de puntos y recompensas, accesible directamente desde <accent>Apple Wallet</accent> y <accent>Google Wallet</accent> sin necesidad de descargar otra app.<br/><br/>Involucrado <accent>de principio a fin</accent>: decisiones de producto, arquitectura, y escribiendo el código que mueve el motor de reglas no-code, la analítica en tiempo real, y la infraestructura cloud multi-tenant con encriptación <accent>AES-256</accent>. En producción hoy mismo.",
+      "detail": {
+        "heading1": "Mi proyecto más grande hasta hoy",
+        "body1": "Soy <accent>co-fundador y desarrollador</accent> de <accent>Puntus</accent> — una plataforma SaaS de lealtad construida para pequeñas y medianas empresas de Latinoamérica. Le damos a los comercios la posibilidad de tener su propio <accent>programa de puntos y recompensas</accent> en minutos, con tarjetas que sus clientes acceden directamente desde <accent>Apple Wallet</accent> o <accent>Google Wallet</accent> — sin tener que descargar nada más.<br/><br/>Es el proyecto del que más orgulloso estoy: no solo por lo que hace, sino porque he estado involucrado <accent>de principio a fin</accent> — desde la idea inicial y las decisiones de producto, hasta escribiendo el código que lo mantiene corriendo en producción.",
+        "heading2": "Lo que construí",
+        "body2": "En el lado de ingeniería, trabajé en una <accent>arquitectura cloud multi-tenant</accent> con encriptación <accent>AES-256</accent>, un <accent>motor de reglas no-code</accent> que permite a los comercios definir la lógica de puntos y recompensas sin tocar una sola línea de código, analítica en tiempo real, e integraciones con los principales POS de la región.<br/><br/>Más allá de la tecnología, Puntus se trata de darle a los pequeños negocios las mismas herramientas de fidelización que tienen las grandes cadenas — a un precio que sí pueden pagar y en su propio idioma. Verlo en producción, usado por comercios reales, es lo más gratificante."
+      }
+    },
+    "coc": {
+      "title": "Generador COC - IDS",
+      "cardDescription": "El propósito principal de esta app generadora de documentos es <accent>simplificar procesos internos</accent> para hacerlos <accent>eficientes</accent> y menos propensos al error humano.<br/><br/>Por políticas de privacidad, el proyecto no puede mostrarse al público, solo con permisos especiales. Esto es para <accent>proteger</accent> los datos sensibles de la empresa.",
+      "detail": {
+        "heading1": "¿De qué trata este proyecto?",
+        "body1": "El propósito principal de esta app generadora de documentos es <accent>simplificar procesos internos</accent> para hacerlos más <accent>eficientes</accent> y menos propensos al error humano.<br/><br/>Por políticas de privacidad, el proyecto no puede mostrarse al público, solo con permisos especiales. Esto es para <accent>proteger</accent> los datos sensibles de la empresa.",
+        "heading2": "¿Quieres saber más?",
+        "body2": "Aquí hay un <accent>video promocional</accent> hecho para los medios de la empresa, hablando del proyecto, donde puedes ver un poco de su uso, simulando un caso real."
+      }
+    },
+    "aql": {
+      "title": "Generador AQL - IDS",
+      "cardDescription": "Esta es una app generadora de documentos AQL. Los documentos AQL son requeridos por los clientes de la empresa para certificar la calidad de sus pedidos. De nuevo, la idea es <accent>simplificar procesos internos</accent> para hacer su creación más <accent>eficiente</accent> y menos propensa al error humano.<br/><br/>Por políticas de privacidad, el proyecto no puede mostrarse al público, solo con permisos especiales. Esto es para <accent>proteger</accent> los datos sensibles de la empresa.",
+      "detail": {
+        "heading1": "¿De qué trata este proyecto?",
+        "body1": "Esta es una app generadora de documentos AQL. Los documentos AQL son requeridos por los clientes de la empresa para certificar la calidad de sus pedidos. De nuevo, la idea es <accent>simplificar procesos internos</accent> para hacer su creación más <accent>eficiente</accent> y menos propensa al error humano.<br/><br/>Por políticas de privacidad, el proyecto no puede mostrarse al público, solo con permisos especiales. Esto es para <accent>proteger</accent> los datos sensibles de la empresa.",
+        "heading2": "Detalles técnicos",
+        "body2": "Construido con <accent>Java</accent> y <accent>MySQL</accent>, esta herramienta interna agiliza la creación de documentos AQL para certificación de calidad."
+      }
+    },
+    "calorie-calculator": {
+      "title": "Calculadora de Calorías",
+      "cardDescription": "Una app simple para convertir macronutrientes, como <accent>Carbohidratos, Proteínas, Grasas y Alcohol</accent>, a su valor equivalente en <accent>Calorías</accent>.",
+      "detail": {
+        "heading1": "¿De qué trata este proyecto?",
+        "body1": "Una app simple para convertir macronutrientes, como <accent>Carbohidratos, Proteínas, Grasas y Alcohol</accent>, a su valor equivalente en <accent>Calorías</accent>.<br/><br/>Es perfecta para cualquiera que esté tracking su nutrición o aprendiendo sobre el contenido calórico de los diferentes macronutrientes. Da conversiones rápidas y precisas para ayudar a tomar decisiones dietéticas informadas.",
+        "heading2": "Características técnicas",
+        "body2": "Construida con <accent>React</accent> para una experiencia dinámica e interactiva, la calculadora tiene cálculos en tiempo real y una interfaz limpia e intuitiva. La app usa <accent>Bootstrap</accent> para el diseño responsivo y <accent>JavaScript</accent> para la lógica.<br/><br/>Incluye validación de inputs, resultados al instante, y un diseño amigable que hace que el tracking de nutrición sea accesible para todos."
+      }
+    },
+    "aesthetic-clock": {
+      "title": "Reloj Estético",
+      "cardDescription": "Un reloj simple diseñado para ser tu compañía mientras eres <accent>productivo</accent>.<br/><br/>Lo puedes tener corriendo de fondo para entrar en <accent>flow</accent>, y a la vez estar pendiente de la hora. 😃",
+      "detail": {
+        "heading1": "¿De qué trata este proyecto?",
+        "body1": "Una aplicación de <accent>reloj estético</accent> que combina funcionalidad con un diseño bonito. Este proyecto muestra el poder de las <accent>animaciones CSS</accent> y <accent>JavaScript</accent> para crear un display de tiempo atractivo y visualmente agradable.<br/><br/>El reloj tiene animaciones suaves, tipografía elegante, y un diseño minimalista que lo hace tanto práctico como visualmente impresionante.",
+        "heading2": "Diseño y desarrollo",
+        "body2": "Construido con <accent>HTML5</accent>, <accent>CSS3</accent>, y <accent>JavaScript</accent>, demuestra técnicas avanzadas de CSS incluyendo animaciones, gradientes, y diseño responsivo. El reloj se actualiza en tiempo real con transiciones suaves.<br/><br/>El diseño se enfoca en la estética manteniendo la funcionalidad, creando un balance perfecto entre forma y función."
+      }
+    }
+  },
+  "lang": {
+    "switchTo": "Cambiar a {{lang}}",
+    "english": "English",
+    "spanish": "Español"
+  }
+}

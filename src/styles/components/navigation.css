@@ -10,6 +10,14 @@
   height: var(--navbar-height);
   z-index: 9999;
   padding: 1.2rem;
+  /* Don't capture clicks in the empty area on either side of the pill,
+     so things behind the navbar (like the lang switcher) stay clickable. */
+  pointer-events: none;
+}
+
+/* Re-enable pointer events on the actual visible pill */
+.inner-nav {
+  pointer-events: auto;
 }
 
 .mobile-bottom-nav {

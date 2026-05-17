@@ -1,0 +1,132 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "projects": "Projects",
+    "contact": "Contact"
+  },
+  "home": {
+    "greeting": "Hello",
+    "name": "I'm <accent>Marcelo</accent>",
+    "location": "San Jose, Costa Rica"
+  },
+  "about": {
+    "tag": "Junior Full-Stack Developer",
+    "title": "Passionate about building things that <accent>look great</accent> and <accent>work great.</accent>",
+    "bio": "I'm <accent>Marcelo Villalobos</accent>, based in Costa Rica and currently finishing my Computer Science degree. My passion lives in front-end and design — but when it comes to building, I go end-to-end.<br/><br/>I have real-world experience through <accent>IDS</accent>, and this year I'm expanding into collaborative projects, supporting friends' products, and taking on my own clients.",
+    "stats": {
+      "years": "Years coding",
+      "projects": "Projects built",
+      "clients": "Happy client"
+    },
+    "cta": "Contact Me"
+  },
+  "skills": {
+    "title": "My Skills"
+  },
+  "projectsSection": {
+    "featuredTitle": "¡Featured Projects!",
+    "allTitle": "¡Take a look at my work!",
+    "earlyTitle": "Early Work",
+    "earlySubtitle": "Projects from when I was learning the craft — kept here for the story they tell.",
+    "viewMore": "View more",
+    "comingSoon": "Coming soon",
+    "seeMore": "See more"
+  },
+  "contact": {
+    "tag": "Get in touch",
+    "title": "Let's build something <accent>great together.</accent>",
+    "subtitle": "Ready to bring your project to life? I'm open to clients, collaborations and new ideas.",
+    "form": {
+      "name": "Your name",
+      "namePlaceholder": "Marcelo Villalobos",
+      "email": "Your email",
+      "emailPlaceholder": "hello@example.com",
+      "company": "Company / Organization",
+      "companyPlaceholder": "Your company name",
+      "message": "How can I help you?",
+      "messagePlaceholder": "Tell me about your project...",
+      "submit": "Send message",
+      "sending": "Sending…",
+      "sent": "Sent ✓",
+      "successMsg": "Thanks! Your message is on its way. I'll get back to you soon.",
+      "errorFallback": "Something went wrong. Please try again."
+    },
+    "aside": {
+      "emailLabel": "Email",
+      "copied": "Copied!",
+      "resumeLabel": "Resume",
+      "downloadCV": "Download CV",
+      "socialsLabel": "Socials"
+    }
+  },
+  "footer": {
+    "tagline": "Building things that <accent>look great</accent> and <accent>work great.</accent>",
+    "socialsTitle": "My Socials",
+    "ctaTitle": "Wanna work together?",
+    "ctaText": "Open to clients, collaborations and new ideas.",
+    "cta": "¡Contact Me!",
+    "copyright": "© 2025 · Marcelo Villalobos · San Jose, Costa Rica"
+  },
+  "projectDetail": {
+    "visitLive": "Visit Live Project",
+    "visitPuntus": "Visit Puntus"
+  },
+  "projects": {
+    "puntus": {
+      "title": "Puntus — Loyalty Platform",
+      "cardDescription": "<accent>Co-founder & developer</accent> of <accent>Puntus</accent> — a SaaS loyalty platform helping Latin American businesses run their own digital points-and-rewards programs, accessible directly from <accent>Apple Wallet</accent> and <accent>Google Wallet</accent> with no extra app required.<br/><br/>Involved <accent>end-to-end</accent>: product decisions, architecture, and writing the code that powers the no-code rule engine, real-time analytics, and a multi-tenant cloud setup with <accent>AES-256</accent> encryption. Live in production today.",
+      "detail": {
+        "heading1": "My biggest project to date",
+        "body1": "I'm <accent>co-founder and developer</accent> of <accent>Puntus</accent> — a SaaS loyalty platform built for Latin American small and mid-sized businesses. We let merchants run their own digital <accent>points and rewards programs</accent> in minutes, with cards customers access directly from <accent>Apple Wallet</accent> or <accent>Google Wallet</accent> — no extra app to download.<br/><br/>This is the project I'm most proud of: not just because of what it does, but because I've been involved <accent>end-to-end</accent> — from the initial idea and product decisions, all the way down to writing the code that powers it in production.",
+        "heading2": "What I built",
+        "body2": "On the engineering side, I worked on a <accent>multi-tenant cloud architecture</accent> with <accent>AES-256</accent> encryption, a <accent>no-code rule engine</accent> that lets merchants define point-earning and reward logic without touching a single line of code, real-time business analytics, and integrations with popular POS systems in the region.<br/><br/>Beyond the tech, Puntus is about giving small businesses the same fidelization tools that big chains have — at a price they can actually afford and in their own language. Seeing it live, used by real merchants, is the most rewarding part."
+      }
+    },
+    "coc": {
+      "title": "COC Generator - IDS",
+      "cardDescription": "This document generator app main purpose is to <accent>simplify internal processes</accent> to make them <accent>efficient</accent> and less prone to human error.<br/><br/>For privacy policies, the project can't be showed to the public, only with special permissions. This is due to <accent>safeguard</accent> the company's sensitive data.",
+      "detail": {
+        "heading1": "What's this project about?",
+        "body1": "This document generator app main purpose is to <accent>simplify internal processes</accent> to make them more <accent>efficient</accent> and less prone to human error.<br/><br/>For privacy policies, the project can't be showed to the public, only with special permissions. This is due to <accent>safeguard</accent> the company's sensitive data.",
+        "heading2": "Want to learn more?",
+        "body2": "Here is a <accent>promotional video</accent> made for the company's media, talking about the project, where you can see a little bit of it being used, simulating a real case scenario."
+      }
+    },
+    "aql": {
+      "title": "AQL Generator - IDS",
+      "cardDescription": "This is an AQL document generator app. AQL documents are required by the company's clients to certify the quality of their orders. Again, the idea is to <accent>simplify internal processes</accent> to make their creation more <accent>efficient</accent> and less prone to human error.<br/><br/>For privacy policies, the project can't be showed to the public, only with special permissions. This is due to <accent>safeguard</accent> the company's sensitive data.",
+      "detail": {
+        "heading1": "What's this project about?",
+        "body1": "This is an AQL document generator app. AQL documents are required by the company's clients to certify the quality of their orders. Again, the idea is to <accent>simplify internal processes</accent> to make their creation more <accent>efficient</accent> and less prone to human error.<br/><br/>For privacy policies, the project can't be showed to the public, only with special permissions. This is due to <accent>safeguard</accent> the company's sensitive data.",
+        "heading2": "Technical Details",
+        "body2": "Built with <accent>Java</accent> and <accent>MySQL</accent>, this internal tool streamlines AQL document creation for quality certification purposes."
+      }
+    },
+    "calorie-calculator": {
+      "title": "Calorie Calculator",
+      "cardDescription": "A simple app you can use to convert macronutrients, such as <accent>Carbs, Protein, Fat and Alcohol</accent> to their equivalent values in <accent>Calories</accent>.",
+      "detail": {
+        "heading1": "What's this project about?",
+        "body1": "A simple app you can use to convert macronutrients, such as <accent>Carbs, Protein, Fat and Alcohol</accent> to their equivalent values in <accent>Calories</accent>.<br/><br/>This tool is perfect for anyone tracking their nutrition or learning about the caloric content of different macronutrients. It provides quick and accurate conversions to help users make informed dietary decisions.",
+        "heading2": "Technical Features",
+        "body2": "Built with <accent>React</accent> for a dynamic and interactive user experience, this calculator features real-time calculations and a clean, intuitive interface. The app uses <accent>Bootstrap</accent> for responsive design and <accent>JavaScript</accent> for the calculation logic.<br/><br/>The application includes input validation, instant results, and a user-friendly design that makes nutrition tracking accessible to everyone."
+      }
+    },
+    "aesthetic-clock": {
+      "title": "Aesthetic Clock",
+      "cardDescription": "A simple clock designed to be your company while being <accent>productive</accent>.<br/><br/>You can have it running in the background to get you in the <accent>flow</accent>, and also be aware of the time. 😃",
+      "detail": {
+        "heading1": "What's this project about?",
+        "body1": "An <accent>aesthetic clock</accent> application that combines functionality with beautiful design. This project showcases the power of <accent>CSS animations</accent> and <accent>JavaScript</accent> to create an engaging and visually appealing time display.<br/><br/>The clock features smooth animations, elegant typography, and a minimalist design that makes it both practical and visually stunning.",
+        "heading2": "Design & Development",
+        "body2": "Built with <accent>HTML5</accent>, <accent>CSS3</accent>, and <accent>JavaScript</accent>, this project demonstrates advanced CSS techniques including animations, gradients, and responsive design. The clock updates in real-time and features smooth transitions.<br/><br/>The design focuses on aesthetics while maintaining functionality, creating a perfect balance between form and function."
+      }
+    }
+  },
+  "lang": {
+    "switchTo": "Switch to {{lang}}",
+    "english": "English",
+    "spanish": "Español"
+  }
+}

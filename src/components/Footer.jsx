@@ -1,4 +1,8 @@
+import { Trans, useTranslation } from 'react-i18next'
+
 export default function Footer() {
+  const { t } = useTranslation()
+
   return (
     <footer id="footer" className="footer">
       <div className="footer-inner">
@@ -6,12 +10,12 @@ export default function Footer() {
         <div className="footer-brand">
           <img src="/images/logo_completo_blanco.png" alt="MarceloDev" />
           <p className="footer-tagline mv-text">
-            Building things that <span className="accent">look great</span> and <span className="accent">work great.</span>
+            <Trans i18nKey="footer.tagline" components={{ accent: <span className="accent" /> }} />
           </p>
         </div>
 
         <div className="footer-col">
-          <h2 className="footer-col-title accent">My Socials</h2>
+          <h2 className="footer-col-title accent">{t('footer.socialsTitle')}</h2>
           <ul className="footer-links">
             <li>
               <a href="https://github.com/marcelo-dev1624" target="_blank" rel="noreferrer">
@@ -35,21 +39,17 @@ export default function Footer() {
         </div>
 
         <div className="footer-col">
-          <h2 className="footer-col-title accent">Wanna work together?</h2>
-          <p className="footer-col-text mv-text">
-            Open to clients, collaborations and new ideas.
-          </p>
+          <h2 className="footer-col-title accent">{t('footer.ctaTitle')}</h2>
+          <p className="footer-col-text mv-text">{t('footer.ctaText')}</p>
           <a href="/contact" className="btn glassmorphism accent outlined-accent footer-cta">
-            ¡Contact Me!
+            {t('footer.cta')}
           </a>
         </div>
 
       </div>
 
       <div className="footer-bottom">
-        <p className="footer-copyright">
-          © 2025 · Marcelo Villalobos · San Jose, Costa Rica
-        </p>
+        <p className="footer-copyright">{t('footer.copyright')}</p>
       </div>
     </footer>
   )

@@ -1,3 +1,4 @@
+import { Trans, useTranslation } from 'react-i18next'
 import ProjectDetailLayout from '../ProjectDetailLayout'
 
 const technologies = [
@@ -7,40 +8,25 @@ const technologies = [
 ]
 
 export default function ProjectAestheticClock() {
+  const { t } = useTranslation()
   return (
-    <ProjectDetailLayout title="Aesthetic Clock" technologies={technologies}>
+    <ProjectDetailLayout title={t('projects.aesthetic-clock.title')} technologies={technologies}>
       <div className="image-and-description">
-        <img src="/images/projects-covers/aesthethic-clock.png" alt="Aesthetic Clock" />
+        <img src="/images/projects-covers/aesthethic-clock.png" alt={t('projects.aesthetic-clock.title')} />
         <div className="line-vertical"></div>
         <div className="text-body">
-          <h1 className="header-text-4">What's this project about?</h1>
+          <h1 className="header-text-4">{t('projects.aesthetic-clock.detail.heading1')}</h1>
           <p className="mv-text">
-            An <span className="accent">aesthetic clock</span> application that combines
-            functionality with beautiful design. This project showcases the power of{' '}
-            <span className="accent">CSS animations</span> and{' '}
-            <span className="accent">JavaScript</span> to create an engaging and visually
-            appealing time display.
-            <br />
-            <br />
-            The clock features smooth animations, elegant typography, and a minimalist design that
-            makes it both practical and visually stunning.
+            <Trans i18nKey="projects.aesthetic-clock.detail.body1" components={{ accent: <span className="accent" /> }} />
           </p>
         </div>
       </div>
 
       <div className="description-and-video">
         <div className="text-body">
-          <h1 className="header-text-4">Design &amp; Development</h1>
+          <h1 className="header-text-4">{t('projects.aesthetic-clock.detail.heading2')}</h1>
           <p className="mv-text">
-            Built with <span className="accent">HTML5</span>,{' '}
-            <span className="accent">CSS3</span>, and{' '}
-            <span className="accent">JavaScript</span>, this project demonstrates advanced CSS
-            techniques including animations, gradients, and responsive design. The clock updates
-            in real-time and features smooth transitions.
-            <br />
-            <br />
-            The design focuses on aesthetics while maintaining functionality, creating a perfect
-            balance between form and function.
+            <Trans i18nKey="projects.aesthetic-clock.detail.body2" components={{ accent: <span className="accent" /> }} />
           </p>
 
           <div className="mt-8 text-center">
@@ -50,7 +36,7 @@ export default function ProjectAestheticClock() {
               rel="noreferrer"
               className="btn glassmorphism accent outlined-accent mv-h3 px-8"
             >
-              <i className="fas fa-external-link-alt mr-2"></i>Visit Live Project
+              <i className="fas fa-external-link-alt mr-2"></i>{t('projectDetail.visitLive')}
             </a>
           </div>
         </div>

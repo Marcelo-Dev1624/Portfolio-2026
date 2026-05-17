@@ -1,3 +1,4 @@
+import { Trans, useTranslation } from 'react-i18next'
 import ProjectDetailLayout from '../ProjectDetailLayout'
 
 const technologies = [
@@ -7,39 +8,31 @@ const technologies = [
 ]
 
 export default function ProjectCOC() {
+  const { t } = useTranslation()
   return (
-    <ProjectDetailLayout title="COC Generator - IDS" technologies={technologies}>
+    <ProjectDetailLayout title={t('projects.coc.title')} technologies={technologies}>
       <div className="image-and-description">
-        <img src="/images/projects-covers/IDS.png" alt="COC Generator - IDS" />
+        <img src="/images/projects-covers/IDS.png" alt={t('projects.coc.title')} />
         <div className="line-vertical"></div>
         <div className="text-body">
-          <h1 className="header-text-4">What's this project about?</h1>
+          <h1 className="header-text-4">{t('projects.coc.detail.heading1')}</h1>
           <p className="mv-text">
-            This document generator app main purpose is to{' '}
-            <span className="accent">simplify internal processes</span> to make them more{' '}
-            <span className="accent">efficient</span> and less prone to human error.
-            <br />
-            <br />
-            For privacy policies, the project can't be showed to the public, only with special
-            permissions. This is due to <span className="accent">safeguard</span> the company's
-            sensitive data.
+            <Trans i18nKey="projects.coc.detail.body1" components={{ accent: <span className="accent" /> }} />
           </p>
         </div>
       </div>
 
       <div className="description-and-video">
         <div className="text-body">
-          <h1 className="header-text-4">Want to learn more?</h1>
+          <h1 className="header-text-4">{t('projects.coc.detail.heading2')}</h1>
           <p className="mv-text">
-            Here is a <span className="accent">promotional video</span> made for the company's
-            media, talking about the project, where you can see a little bit of it being used,
-            simulating a real case scenario.
+            <Trans i18nKey="projects.coc.detail.body2" components={{ accent: <span className="accent" /> }} />
           </p>
         </div>
         <iframe
           className="project-video"
           src="https://www.youtube.com/embed/F39hUFckLeE?si=cdehciAtfCLp60Pq&start=1"
-          title="COC Generator - IDS video"
+          title={t('projects.coc.title')}
           frameBorder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
           referrerPolicy="strict-origin-when-cross-origin"

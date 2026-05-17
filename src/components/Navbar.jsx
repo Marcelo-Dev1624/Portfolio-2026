@@ -1,15 +1,17 @@
 import { useRef, useEffect } from 'react'
 import { useNavigate, useLocation } from 'react-router-dom'
+import { useTranslation } from 'react-i18next'
 import { useNavBehavior } from '../hooks/useNavBehavior'
 
 const NAV_ITEMS = [
-  { id: 'Home',     label: 'Home',     icon: 'fa-solid fa-house',          path: '/' },
-  { id: 'About',    label: 'About',    icon: 'fa-regular fa-address-card', path: '/' },
-  { id: 'Projects', label: 'Projects', icon: 'fa-solid fa-code',           path: '/' },
-  { id: 'Contact',  label: 'Contact',  icon: 'fa-regular fa-envelope',     path: '/contact' },
+  { id: 'Home',     labelKey: 'nav.home',     icon: 'fa-solid fa-house',          path: '/' },
+  { id: 'About',    labelKey: 'nav.about',    icon: 'fa-regular fa-address-card', path: '/' },
+  { id: 'Projects', labelKey: 'nav.projects', icon: 'fa-solid fa-code',           path: '/' },
+  { id: 'Contact',  labelKey: 'nav.contact',  icon: 'fa-regular fa-envelope',     path: '/contact' },
 ]
 
 export default function Navbar() {
+  const { t } = useTranslation()
   const {
     isScrolled,
     isCompact,
@@ -76,7 +78,7 @@ export default function Navbar() {
                     style={{ cursor: 'pointer' }}
                   >
                     <i className={`${item.icon} mx-2`} />
-                    {item.label}
+                    {t(item.labelKey)}
                   </a>
                 </li>
               ))}
@@ -95,7 +97,7 @@ export default function Navbar() {
             onClick={() => handleClick(item)}
           >
             <i className={item.icon} />
-            <span>{item.label}</span>
+            <span>{t(item.labelKey)}</span>
           </a>
         ))}
       </div>
