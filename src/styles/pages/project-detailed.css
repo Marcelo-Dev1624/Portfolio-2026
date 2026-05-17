@@ -1,6 +1,14 @@
 /* PROJECT DETAILED PAGE STYLES */
 
-/* Navbar for project pages */
+/* Navbar for project pages
+ *
+ * Layout (consistent on both desktop and mobile):
+ *  - X close button on the LEFT
+ *  - Floating MobileLogo island in the CENTER (rendered as a sibling)
+ *  - Language switcher in the TOP-RIGHT (separate floating element)
+ *
+ * The navbar's own logo is hidden — the floating island is the brand
+ * mark for project pages. */
 .navbar {
   width: 100%;
   position: fixed;
@@ -8,8 +16,8 @@
   z-index: 1000;
   background-color: var(--color-primary-100);
   /* 24px top/bottom puts the 44px content row centered at Y=46px — same
-     as the language switcher (top:24px + height:44/2 = 46), so logo,
-     close-X and switcher all sit on the same horizontal line. */
+     as the language switcher (top:24px + height:44/2 = 46), so X and
+     switcher sit on the same horizontal line. */
   padding: 24px 1rem;
 
   & .inner-navbar {
@@ -17,21 +25,10 @@
     max-width: 1200px;
     margin: 0 auto;
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start; /* X anchored to the left */
     align-items: center;
   }
 
-  & .logo {
-    display: flex;
-    align-items: center;
-
-    & img {
-      /* 44px tall to match the close button and language switcher */
-      height: 44px;
-      width: auto;
-    }
-  }
-  
   & .close-btn {
     & a {
       display: inline-flex;
@@ -255,15 +252,6 @@
 
     & .inner-navbar {
       width: 95%;
-      /* Close button moves to the left side on mobile because the language
-         switcher now lives in the top-right corner. */
-      justify-content: flex-start;
-    }
-
-    /* The floating MobileLogo island already shows the brand at the top,
-       so the navbar's left logo is redundant on small screens. */
-    & .logo {
-      display: none;
     }
 
     /* Match the language switcher's diameter (38px) for visual parity */

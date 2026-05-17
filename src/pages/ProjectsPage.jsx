@@ -18,16 +18,16 @@ export default function ProjectsPage() {
         className="section px-4 pt-20 xl:pt-44 flex-col justify-center items-center"
         id="Projects"
       >
-        <Reveal as="h1" className="header-text-2 accent">{t('projectsSection.allTitle')}</Reveal>
+        <Reveal eager as="h1" className="header-text-2 accent">{t('projectsSection.allTitle')}</Reveal>
 
         {featuredProjects.map((project, i) => (
-          <Reveal key={project.id} index={i + 1} style={{ width: '100%', display: 'flex', justifyContent: 'center' }}>
+          <Reveal eager key={project.id} index={i + 1} style={{ width: '100%', display: 'flex', justifyContent: 'center' }}>
             <ProjectCard project={project} />
           </Reveal>
         ))}
 
         {/* Early Work divider + section */}
-        <Reveal className="early-work-divider">
+        <Reveal eager className="early-work-divider">
           <span className="early-work-line" />
           <div className="early-work-heading">
             <h2 className="header-text-3 accent">{t('projectsSection.earlyTitle')}</h2>
@@ -38,6 +38,7 @@ export default function ProjectsPage() {
 
         {earlyProjects.map((project, i) => (
           <Reveal
+            eager
             key={project.id}
             index={i + 1}
             style={{ width: '100%', display: 'flex', justifyContent: 'center' }}

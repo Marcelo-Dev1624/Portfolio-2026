@@ -11,15 +11,12 @@ export default function ProjectDetailLayout({ title, technologies, children }) {
 
   return (
     <>
-      <MobileLogo />
+      {/* alwaysVisible: keep the floating brand island on desktop too,
+          so the project detail navigation matches the mobile layout */}
+      <MobileLogo alwaysVisible />
 
       <div className="navbar">
         <div className="inner-navbar">
-          <div className="logo">
-            <Link to="/">
-              <img src="/images/isotipo_blanco.png" alt="MarceloDev logo" />
-            </Link>
-          </div>
           <div className="close-btn">
             <Link to="/projects" aria-label={t('projectDetail.close')} title={t('projectDetail.close')}>
               <i className="fa-solid fa-xmark" aria-hidden="true"></i>
