@@ -60,6 +60,9 @@ export default function ContactPage() {
     : status === 'success' ? t('contact.form.sent')
     : t('contact.form.submit')
 
+  // WhatsApp deeplink with a pre-filled message in the current language
+  const whatsappUrl = `https://wa.me/50686627095?text=${encodeURIComponent(t('contact.whatsappMessage'))}`
+
   return (
     <>
       <Navbar />
@@ -182,7 +185,7 @@ export default function ContactPage() {
                 <a href="https://www.linkedin.com/in/marcelo-villalobos-400965244/" target="_blank" rel="noreferrer" className="social-media-icon secondary glassmorphism" aria-label="LinkedIn">
                   <i className="fab fa-linkedin"></i>
                 </a>
-                <a href="https://wa.me/50686627095" target="_blank" rel="noreferrer" className="social-media-icon secondary glassmorphism" aria-label="WhatsApp">
+                <a href={whatsappUrl} target="_blank" rel="noreferrer" className="social-media-icon secondary glassmorphism" aria-label="WhatsApp">
                   <i className="fab fa-whatsapp"></i>
                 </a>
               </div>

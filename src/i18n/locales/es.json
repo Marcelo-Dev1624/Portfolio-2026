@@ -58,7 +58,8 @@
       "resumeLabel": "Currículum",
       "downloadCV": "Descargar CV",
       "socialsLabel": "Redes sociales"
-    }
+    },
+    "whatsappMessage": "¡Hola Marcelo! Te escribo desde tu portafolio."
   },
   "footer": {
     "tagline": "Construyendo cosas que <accent>se ven bien</accent> y <accent>funcionan bien.</accent>",

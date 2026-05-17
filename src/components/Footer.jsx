@@ -2,6 +2,7 @@ import { Trans, useTranslation } from 'react-i18next'
 
 export default function Footer() {
   const { t } = useTranslation()
+  const whatsappUrl = `https://wa.me/50686627095?text=${encodeURIComponent(t('contact.whatsappMessage'))}`
 
   return (
     <footer id="footer" className="footer">
@@ -36,7 +37,7 @@ export default function Footer() {
               </a>
             </li>
             <li>
-              <a href="https://wa.me/50686627095" target="_blank" rel="noreferrer">
+              <a href={whatsappUrl} target="_blank" rel="noreferrer">
                 <i className="fab fa-whatsapp" />
                 <span>WhatsApp</span>
               </a>

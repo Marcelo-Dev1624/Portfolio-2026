@@ -58,7 +58,8 @@
       "resumeLabel": "Resume",
       "downloadCV": "Download CV",
       "socialsLabel": "Socials"
-    }
+    },
+    "whatsappMessage": "Hi Marcelo! I'm reaching out from your portfolio."
   },
   "footer": {
     "tagline": "Building things that <accent>look great</accent> and <accent>work great.</accent>",
