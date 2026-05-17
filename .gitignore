@@ -1,0 +1,29 @@
+# Dependencies — installed by `npm install`, regenerated in CI
+node_modules/
+
+# Build output
+dist/
+build/
+
+# Local env files (if any)
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+*.log
+
+# Editor / OS junk
+.DS_Store
+Thumbs.db
+*.swp
+.idea/
+.vscode/
+
+# Vite cache (subset of node_modules already covered, kept explicit for clarity)
+node_modules/.vite/
