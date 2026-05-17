@@ -255,16 +255,22 @@
 
     & .inner-navbar {
       width: 95%;
-      /* With logo hidden below, this keeps the close button hugging the right
-         edge instead of jumping to the left (which space-between does with
-         a single flex item). */
-      justify-content: flex-end;
+      /* Close button moves to the left side on mobile because the language
+         switcher now lives in the top-right corner. */
+      justify-content: flex-start;
     }
 
     /* The floating MobileLogo island already shows the brand at the top,
        so the navbar's left logo is redundant on small screens. */
     & .logo {
       display: none;
+    }
+
+    /* Match the language switcher's diameter (38px) for visual parity */
+    & .close-btn a {
+      width: 38px;
+      height: 38px;
+      font-size: 1.1rem;
     }
   }
 }

@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Marcelo Villalobos Ali — Resume</title>
+
+  <!-- Outfit, same font as the portfolio -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet"
+  />
+
+  <style>
+    :root {
+      --bg:           #0e1116;
+      --sidebar-bg:   #0e1116;
+      --accent:       #4de297;
+      --text:         #ffffff;
+      --text-muted:   rgba(255, 255, 255, 0.55);
+      --text-dim:     rgba(255, 255, 255, 0.4);
+      --chip-bg:      rgba(255, 255, 255, 0.04);
+      --chip-border:  rgba(255, 255, 255, 0.12);
+      --rule:         rgba(255, 255, 255, 0.1);
+      --card-border:  rgba(255, 255, 255, 0.08);
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    html, body {
+      background-color: var(--bg);
+      color: var(--text);
+      font-family: 'Outfit', sans-serif;
+      font-weight: 400;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    /* A4 page — fits when printed */
+    .page {
+      width: 210mm;
+      min-height: 297mm;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 33% 67%;
+      background-color: var(--bg);
+    }
+
+    /* ───────────── SIDEBAR ───────────── */
+    .sidebar {
+      background-color: var(--sidebar-bg);
+      padding: 18mm 8mm 12mm 10mm;
+      display: flex;
+      flex-direction: column;
+      gap: 8mm;
+    }
+
+    .name-block h1 {
+      font-size: 22pt;
+      font-weight: 700;
+      line-height: 1.1;
+      letter-spacing: -0.01em;
+    }
+
+    .name-block .role {
+      margin-top: 4mm;
+      font-size: 9.5pt;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      color: var(--accent);
+    }
+
+    .sidebar-divider {
+      height: 1px;
+      background-color: var(--rule);
+      margin: 0;
+    }
+
+    .sidebar h2 {
+      font-size: 10pt;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      color: var(--accent);
+      margin-bottom: 4mm;
+    }
+
+    /* ────── Contact list ────── */
+    .contact-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 2.5mm;
+      font-size: 9.5pt;
+      color: var(--text);
+    }
+
+    /* ────── Skills ────── */
+    .skill-group + .skill-group { margin-top: 5mm; }
+
+    .skill-group h3 {
+      font-size: 8pt;
+      font-weight: 500;
+      letter-spacing: 0.14em;
+      color: var(--text-dim);
+      margin-bottom: 2.5mm;
+    }
+
+    .chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2mm;
+    }
+
+    .chip {
+      background-color: var(--chip-bg);
+      border: 1px solid var(--chip-border);
+      border-radius: 6px;
+      padding: 1.5mm 3mm;
+      font-size: 8.5pt;
+      font-weight: 400;
+      color: var(--text);
+    }
+
+    /* ────── Spoken languages ────── */
+    .lang-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 9.5pt;
+      padding: 1mm 0;
+    }
+    .lang-row + .lang-row { margin-top: 1mm; }
+    .lang-row .lang-level {
+      color: var(--accent);
+      font-weight: 500;
+    }
+
+    /* ───────────── MAIN ───────────── */
+    .main {
+      padding: 18mm 10mm 12mm 10mm;
+      display: flex;
+      flex-direction: column;
+      gap: 8mm;
+    }
+
+    .main h2 {
+      font-size: 12pt;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      color: var(--accent);
+      padding-bottom: 3mm;
+      border-bottom: 1px solid var(--rule);
+      margin-bottom: 4mm;
+    }
+
+    /* Job / education entry */
+    .entry {
+      margin-bottom: 5mm;
+    }
+    .entry:last-child { margin-bottom: 0; }
+
+    .entry-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 6mm;
+      margin-bottom: 1mm;
+    }
+
+    .entry-title {
+      font-size: 11pt;
+      font-weight: 600;
+      color: var(--text);
+    }
+
+    .entry-date {
+      font-size: 9pt;
+      color: var(--text-muted);
+      white-space: nowrap;
+    }
+
+    .entry-org {
+      font-size: 10pt;
+      font-weight: 500;
+      color: var(--accent);
+      margin-bottom: 2.5mm;
+    }
+
+    .entry-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 1.5mm;
+      font-size: 9.5pt;
+      line-height: 1.45;
+    }
+
+    .entry-list li {
+      position: relative;
+      padding-left: 5mm;
+    }
+
+    .entry-list li::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0.6em;
+      width: 3mm;
+      height: 1.5px;
+      background-color: var(--accent);
+    }
+
+    /* ────── Project cards ────── */
+    .project-card {
+      border: 1px solid var(--card-border);
+      border-left: 3px solid var(--accent);
+      border-radius: 6px;
+      padding: 4mm 5mm 4mm 5mm;
+      margin-bottom: 4mm;
+    }
+    .project-card:last-child { margin-bottom: 0; }
+
+    .project-card h3 {
+      font-size: 10.5pt;
+      font-weight: 700;
+      margin-bottom: 2mm;
+      color: var(--text);
+    }
+
+    .project-card .entry-list {
+      margin-bottom: 3mm;
+    }
+
+    .project-tools {
+      font-size: 9pt;
+      color: var(--text-muted);
+    }
+
+    .project-tools strong {
+      color: var(--accent);
+      font-weight: 600;
+    }
+
+    /* ───────────── PRINT ───────────── */
+    @media print {
+      html, body {
+        background: var(--bg);
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+
+      .page {
+        margin: 0;
+        width: 210mm;
+        min-height: 297mm;
+      }
+
+      @page {
+        size: A4;
+        margin: 0;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="page">
+
+    <!-- LEFT SIDEBAR -->
+    <aside class="sidebar">
+
+      <div class="name-block">
+        <h1>Marcelo Villalobos Ali</h1>
+        <p class="role">SOFTWARE DEVELOPER</p>
+      </div>
+
+      <div class="sidebar-divider"></div>
+
+      <section>
+        <h2>CONTACT</h2>
+        <ul class="contact-list">
+          <li>San José / Guanacaste, CR</li>
+          <li>marcelovillaali@gmail.com</li>
+          <li>+506 8662 7095</li>
+          <li>linkedin.com/marcelo-villalobos</li>
+          <li>marcelodev.es</li>
+          <li>github.com/Marcelo-Dev1624</li>
+        </ul>
+      </section>
+
+      <div class="sidebar-divider"></div>
+
+      <section>
+        <h2>TECHNICAL SKILLS</h2>
+
+        <div class="skill-group">
+          <h3>LANGUAGES</h3>
+          <div class="chips">
+            <span class="chip">Java</span>
+            <span class="chip">JavaScript</span>
+            <span class="chip">TypeScript</span>
+            <span class="chip">HTML</span>
+            <span class="chip">CSS</span>
+          </div>
+        </div>
+
+        <div class="skill-group">
+          <h3>FRAMEWORKS &amp; LIBRARIES</h3>
+          <div class="chips">
+            <span class="chip">React</span>
+            <span class="chip">Next.js</span>
+            <span class="chip">Node.js</span>
+            <span class="chip">NestJS</span>
+            <span class="chip">Tailwind CSS</span>
+            <span class="chip">Prisma</span>
+          </div>
+        </div>
+
+        <div class="skill-group">
+          <h3>DATABASES</h3>
+          <div class="chips">
+            <span class="chip">PostgreSQL</span>
+            <span class="chip">MySQL</span>
+            <span class="chip">MongoDB</span>
+            <span class="chip">Redis</span>
+          </div>
+        </div>
+
+        <div class="skill-group">
+          <h3>TOOLS</h3>
+          <div class="chips">
+            <span class="chip">Git</span>
+            <span class="chip">Docker</span>
+            <span class="chip">Figma</span>
+            <span class="chip">VS Code</span>
+            <span class="chip">NetBeans</span>
+          </div>
+        </div>
+      </section>
+
+      <div class="sidebar-divider"></div>
+
+      <section>
+        <h2>LANGUAGES</h2>
+        <div class="lang-row">
+          <span>Spanish</span>
+          <span class="lang-level">Native</span>
+        </div>
+        <div class="lang-row">
+          <span>English</span>
+          <span class="lang-level">C1 – Advanced</span>
+        </div>
+      </section>
+
+    </aside>
+
+    <!-- RIGHT MAIN COLUMN -->
+    <main class="main">
+
+      <section>
+        <h2>EDUCATION</h2>
+        <div class="entry">
+          <div class="entry-header">
+            <div class="entry-title">Bachelor's Degree in Software Engineering</div>
+            <div class="entry-date">2022 – Present</div>
+          </div>
+          <div class="entry-org">Universidad Latina de Costa Rica</div>
+        </div>
+      </section>
+
+      <section>
+        <h2>WORK EXPERIENCE</h2>
+
+        <div class="entry">
+          <div class="entry-header">
+            <div class="entry-title">Co-founder &amp; Developer</div>
+            <div class="entry-date">Jan 2025 – Present</div>
+          </div>
+          <div class="entry-org">Puntus</div>
+          <ul class="entry-list">
+            <li>Co-founder and developer of a multi-tenant SaaS loyalty platform for Latin American businesses</li>
+            <li>Built backend with NestJS + TypeScript + PostgreSQL (Prisma) and frontend with Next.js + Tailwind CSS</li>
+            <li>Designed and shipped a no-code rule engine, real-time analytics, and Apple/Google Wallet integrations</li>
+            <li>Cloud infrastructure containerized with Docker; multi-tenant architecture with AES-256 encryption</li>
+          </ul>
+        </div>
+
+        <div class="entry">
+          <div class="entry-header">
+            <div class="entry-title">Software Department Intern</div>
+            <div class="entry-date">May 2024 – Feb 2025</div>
+          </div>
+          <div class="entry-org">IDS</div>
+          <ul class="entry-list">
+            <li>Built two internal automation tools: COC Generator (Certificates of Conformity) and AQL Generator (quality control workflows based on AQL international standards)</li>
+            <li>Used Java + MySQL + NetBeans to streamline document creation processes and reduce human error</li>
+            <li>Provided ongoing technical support, maintenance, and feature updates</li>
+          </ul>
+        </div>
+
+        <div class="entry">
+          <div class="entry-header">
+            <div class="entry-title">Video Editor</div>
+            <div class="entry-date">May 2022 – Jul 2025</div>
+          </div>
+          <div class="entry-org">O'Sullivan Culinary</div>
+          <ul class="entry-list">
+            <li>Edited online courses and educational content for digital platforms</li>
+            <li>Produced promotional videos and handled full post-production workflow</li>
+            <li>Managed video recording and final delivery of multimedia assets</li>
+          </ul>
+        </div>
+      </section>
+
+      <section>
+        <h2>PROJECTS</h2>
+
+        <article class="project-card">
+          <h3>Puntus</h3>
+          <ul class="entry-list">
+            <li>Multi-tenant SaaS loyalty platform for Latin American businesses, with Apple/Google Wallet integration</li>
+            <li>Co-founder and full-stack developer; live in production with a no-code rule engine and real-time analytics</li>
+          </ul>
+          <div class="project-tools"><strong>Tools:</strong> Next.js · NestJS · TypeScript · PostgreSQL · Prisma · Redis · Docker</div>
+        </article>
+
+        <article class="project-card">
+          <h3>COC Generator – IDS</h3>
+          <ul class="entry-list">
+            <li>Desktop application for generating Certificates of Conformity</li>
+            <li>Ongoing technical support, maintenance, and feature adjustments</li>
+          </ul>
+          <div class="project-tools"><strong>Tools:</strong> NetBeans IDE · Figma · MySQL</div>
+        </article>
+
+        <article class="project-card">
+          <h3>AQL Generator – IDS</h3>
+          <ul class="entry-list">
+            <li>Quality control application based on AQL international standards</li>
+            <li>Sole developer and support manager throughout the project lifecycle</li>
+          </ul>
+          <div class="project-tools"><strong>Tools:</strong> NetBeans IDE · Figma · MySQL</div>
+        </article>
+
+      </section>
+
+    </main>
+
+  </div>
+</body>
+</html>
