@@ -71,7 +71,8 @@
   },
   "projectDetail": {
     "visitLive": "Visit Live Project",
-    "visitPuntus": "Visit Puntus"
+    "visitPuntus": "Visit Puntus",
+    "close": "Close project"
   },
   "projects": {
     "puntus": {

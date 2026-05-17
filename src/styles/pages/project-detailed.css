@@ -27,16 +27,29 @@
   
   & .close-btn {
     & a {
-      font-size: 2rem;
-      color: var(--color-secondary-100);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background-color: var(--accent-color);
+      color: var(--color-primary-100);
+      font-size: 1.25rem;
       text-decoration: none;
-      transition: var(--transition-normal);
-      transform: rotate(45deg);
-      display: inline-block;
-      
+      box-shadow: 0 2px 12px rgba(77, 226, 151, 0.35);
+      transition:
+        transform var(--transition-normal),
+        box-shadow var(--transition-normal),
+        background-color var(--transition-normal);
+
       &:hover {
-        color: var(--accent-color);
-        transform: rotate(45deg) scale(1.1);
+        transform: scale(1.1);
+        box-shadow: 0 4px 22px rgba(77, 226, 151, 0.55);
+      }
+
+      &:active {
+        transform: scale(0.95);
       }
     }
   }

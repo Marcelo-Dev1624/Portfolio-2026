@@ -1,10 +1,12 @@
 import { Children } from 'react'
 import { Link } from 'react-router-dom'
+import { useTranslation } from 'react-i18next'
 import Footer from '../components/Footer'
 import MobileLogo from '../components/MobileLogo'
 import Reveal from '../components/Reveal'
 
 export default function ProjectDetailLayout({ title, technologies, children }) {
+  const { t } = useTranslation()
   const blocks = Children.toArray(children)
 
   return (
@@ -19,7 +21,9 @@ export default function ProjectDetailLayout({ title, technologies, children }) {
             </Link>
           </div>
           <div className="close-btn">
-            <Link to="/projects">+</Link>
+            <Link to="/projects" aria-label={t('projectDetail.close')} title={t('projectDetail.close')}>
+              <i className="fa-solid fa-xmark" aria-hidden="true"></i>
+            </Link>
           </div>
         </div>
       </div>

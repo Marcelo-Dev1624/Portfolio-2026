@@ -71,7 +71,8 @@
   },
   "projectDetail": {
     "visitLive": "Visitar proyecto en vivo",
-    "visitPuntus": "Visitar Puntus"
+    "visitPuntus": "Visitar Puntus",
+    "close": "Cerrar proyecto"
   },
   "projects": {
     "puntus": {
