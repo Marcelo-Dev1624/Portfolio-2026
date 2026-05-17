@@ -2,20 +2,25 @@ import { useTranslation } from "react-i18next";
 import { useScrollAnimation } from "../../hooks/useScrollAnimation";
 
 const skills = [
+  // Languages
   { src: "/images/technologies/html.png", alt: "HTML" },
   { src: "/images/technologies/css.png", alt: "CSS" },
   { src: "/images/technologies/js.png", alt: "JavaScript" },
+  { src: "/images/technologies/Typescript_logo_2020.png", alt: "TypeScript" },
   { src: "/images/technologies/java.png", alt: "Java" },
-  { src: "/images/technologies/bootstrap.png", alt: "Bootstrap" },
-  {
-    src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg",
-    alt: "Tailwind CSS",
-  },
+
+  // Frontend
   { src: "/images/technologies/react.png", alt: "React" },
+  { src: "/images/technologies/nextjs-icon.svg", alt: "Next.js" },
+  { src: "/images/technologies/tailwind.png", alt: "Tailwind CSS" },
+  { src: "/images/technologies/bootstrap.png", alt: "Bootstrap" },
   {
     src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vitejs/vitejs-original.svg",
     alt: "Vite",
   },
+
+  // Backend
+  { src: "/images/technologies/NestJS.svg", alt: "NestJS" },
   {
     src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg",
     alt: "Node.js",
@@ -24,8 +29,25 @@ const skills = [
     src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg",
     alt: "Express",
   },
-  { src: "/images/technologies/mongo.png", alt: "MongoDB" },
+
+  // Databases
+  { src: "/images/technologies/postgresql.png", alt: "PostgreSQL" },
   { src: "/images/technologies/mysql.png", alt: "MySQL" },
+  { src: "/images/technologies/mongo.png", alt: "MongoDB" },
+  {
+    src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/prisma/prisma-original.svg",
+    alt: "Prisma",
+  },
+  {
+    src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redis/redis-original.svg",
+    alt: "Redis",
+  },
+
+  // Infra & tools
+  {
+    src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg",
+    alt: "Docker",
+  },
   {
     src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg",
     alt: "Git",
