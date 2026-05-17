@@ -25,7 +25,7 @@ export default function ProjectDetailLayout({ title, technologies, children }) {
       </div>
 
       <div className="project-detailed">
-        <Reveal className="header">
+        <Reveal eager className="header">
           <h1 className="header-text-3">{title}</h1>
           <div className="technologies-block">
             {technologies.map((tech) => (
@@ -35,7 +35,7 @@ export default function ProjectDetailLayout({ title, technologies, children }) {
         </Reveal>
         <div className="project-body">
           {blocks.map((block, i) => (
-            <Reveal key={i} index={i + 1}>
+            <Reveal eager key={i} index={i + 1}>
               {block}
             </Reveal>
           ))}
