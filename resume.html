@@ -51,22 +51,22 @@
     /* ───────────── SIDEBAR ───────────── */
     .sidebar {
       background-color: var(--sidebar-bg);
-      padding: 18mm 8mm 12mm 10mm;
+      padding: 13mm 7mm 10mm 9mm;
       display: flex;
       flex-direction: column;
-      gap: 8mm;
+      gap: 5mm;
     }
 
     .name-block h1 {
-      font-size: 22pt;
+      font-size: 19pt;
       font-weight: 700;
-      line-height: 1.1;
+      line-height: 1.05;
       letter-spacing: -0.01em;
     }
 
     .name-block .role {
-      margin-top: 4mm;
-      font-size: 9.5pt;
+      margin-top: 2.5mm;
+      font-size: 9pt;
       font-weight: 600;
       letter-spacing: 0.12em;
       color: var(--accent);
@@ -79,11 +79,11 @@
     }
 
     .sidebar h2 {
-      font-size: 10pt;
+      font-size: 9.5pt;
       font-weight: 700;
       letter-spacing: 0.14em;
       color: var(--accent);
-      margin-bottom: 4mm;
+      margin-bottom: 2.5mm;
     }
 
     /* ────── Contact list ────── */
@@ -91,34 +91,35 @@
       list-style: none;
       display: flex;
       flex-direction: column;
-      gap: 2.5mm;
-      font-size: 9.5pt;
+      gap: 1.5mm;
+      font-size: 9pt;
+      line-height: 1.3;
       color: var(--text);
     }
 
     /* ────── Skills ────── */
-    .skill-group + .skill-group { margin-top: 5mm; }
+    .skill-group + .skill-group { margin-top: 3mm; }
 
     .skill-group h3 {
-      font-size: 8pt;
+      font-size: 7.5pt;
       font-weight: 500;
       letter-spacing: 0.14em;
       color: var(--text-dim);
-      margin-bottom: 2.5mm;
+      margin-bottom: 1.5mm;
     }
 
     .chips {
       display: flex;
       flex-wrap: wrap;
-      gap: 2mm;
+      gap: 1.5mm;
     }
 
     .chip {
       background-color: var(--chip-bg);
       border: 1px solid var(--chip-border);
-      border-radius: 6px;
-      padding: 1.5mm 3mm;
-      font-size: 8.5pt;
+      border-radius: 5px;
+      padding: 1mm 2.5mm;
+      font-size: 8pt;
       font-weight: 400;
       color: var(--text);
     }
@@ -128,10 +129,10 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      font-size: 9.5pt;
-      padding: 1mm 0;
+      font-size: 9pt;
+      padding: 0.5mm 0;
     }
-    .lang-row + .lang-row { margin-top: 1mm; }
+    .lang-row + .lang-row { margin-top: 0.5mm; }
     .lang-row .lang-level {
       color: var(--accent);
       font-weight: 500;
@@ -139,25 +140,25 @@
 
     /* ───────────── MAIN ───────────── */
     .main {
-      padding: 18mm 10mm 12mm 10mm;
+      padding: 13mm 9mm 10mm 9mm;
       display: flex;
       flex-direction: column;
-      gap: 8mm;
+      gap: 5mm;
     }
 
     .main h2 {
-      font-size: 12pt;
+      font-size: 11pt;
       font-weight: 700;
       letter-spacing: 0.12em;
       color: var(--accent);
-      padding-bottom: 3mm;
+      padding-bottom: 2mm;
       border-bottom: 1px solid var(--rule);
-      margin-bottom: 4mm;
+      margin-bottom: 3mm;
     }
 
     /* Job / education entry */
     .entry {
-      margin-bottom: 5mm;
+      margin-bottom: 3.5mm;
     }
     .entry:last-child { margin-bottom: 0; }
 
@@ -166,48 +167,48 @@
       justify-content: space-between;
       align-items: baseline;
       gap: 6mm;
-      margin-bottom: 1mm;
+      margin-bottom: 0.5mm;
     }
 
     .entry-title {
-      font-size: 11pt;
+      font-size: 10.5pt;
       font-weight: 600;
       color: var(--text);
     }
 
     .entry-date {
-      font-size: 9pt;
+      font-size: 8.5pt;
       color: var(--text-muted);
       white-space: nowrap;
     }
 
     .entry-org {
-      font-size: 10pt;
+      font-size: 9.5pt;
       font-weight: 500;
       color: var(--accent);
-      margin-bottom: 2.5mm;
+      margin-bottom: 1.5mm;
     }
 
     .entry-list {
       list-style: none;
       display: flex;
       flex-direction: column;
-      gap: 1.5mm;
-      font-size: 9.5pt;
-      line-height: 1.45;
+      gap: 1mm;
+      font-size: 9pt;
+      line-height: 1.35;
     }
 
     .entry-list li {
       position: relative;
-      padding-left: 5mm;
+      padding-left: 4.5mm;
     }
 
     .entry-list li::before {
       content: "";
       position: absolute;
       left: 0;
-      top: 0.6em;
-      width: 3mm;
+      top: 0.55em;
+      width: 2.5mm;
       height: 1.5px;
       background-color: var(--accent);
     }
@@ -216,26 +217,27 @@
     .project-card {
       border: 1px solid var(--card-border);
       border-left: 3px solid var(--accent);
-      border-radius: 6px;
-      padding: 4mm 5mm 4mm 5mm;
-      margin-bottom: 4mm;
+      border-radius: 5px;
+      padding: 2.5mm 4mm;
+      margin-bottom: 2.5mm;
     }
     .project-card:last-child { margin-bottom: 0; }
 
     .project-card h3 {
-      font-size: 10.5pt;
+      font-size: 10pt;
       font-weight: 700;
-      margin-bottom: 2mm;
+      margin-bottom: 1.5mm;
       color: var(--text);
     }
 
     .project-card .entry-list {
-      margin-bottom: 3mm;
+      margin-bottom: 1.5mm;
     }
 
     .project-tools {
-      font-size: 9pt;
+      font-size: 8.5pt;
       color: var(--text-muted);
+      line-height: 1.3;
     }
 
     .project-tools strong {
@@ -273,7 +275,7 @@
 
       <div class="name-block">
         <h1>Marcelo Villalobos Ali</h1>
-        <p class="role">SOFTWARE DEVELOPER</p>
+        <p class="role">SOFTWARE ENGINEER</p>
       </div>
 
       <div class="sidebar-divider"></div>
@@ -380,10 +382,9 @@
           </div>
           <div class="entry-org">Puntus</div>
           <ul class="entry-list">
-            <li>Co-founder and developer of a multi-tenant SaaS loyalty platform for Latin American businesses</li>
-            <li>Built backend with NestJS + TypeScript + PostgreSQL (Prisma) and frontend with Next.js + Tailwind CSS</li>
-            <li>Designed and shipped a no-code rule engine, real-time analytics, and Apple/Google Wallet integrations</li>
-            <li>Cloud infrastructure containerized with Docker; multi-tenant architecture with AES-256 encryption</li>
+            <li>Co-founder and full-stack developer of a multi-tenant SaaS loyalty platform for Latin American businesses, live in production</li>
+            <li>Built backend (NestJS + TypeScript + PostgreSQL via Prisma) and frontend (Next.js + Tailwind), containerized with Docker</li>
+            <li>Shipped a no-code rule engine, real-time analytics and Apple/Google Wallet integrations with AES-256 encryption</li>
           </ul>
         </div>
 
@@ -394,9 +395,8 @@
           </div>
           <div class="entry-org">IDS</div>
           <ul class="entry-list">
-            <li>Built two internal automation tools: COC Generator (Certificates of Conformity) and AQL Generator (quality control workflows based on AQL international standards)</li>
-            <li>Used Java + MySQL + NetBeans to streamline document creation processes and reduce human error</li>
-            <li>Provided ongoing technical support, maintenance, and feature updates</li>
+            <li>Built two internal Java + MySQL tools: COC Generator (Certificates of Conformity) and AQL Generator (quality control workflows)</li>
+            <li>Streamlined document creation processes; provided ongoing technical support, maintenance and feature updates</li>
           </ul>
         </div>
 
@@ -407,9 +407,8 @@
           </div>
           <div class="entry-org">O'Sullivan Culinary</div>
           <ul class="entry-list">
-            <li>Edited online courses and educational content for digital platforms</li>
-            <li>Produced promotional videos and handled full post-production workflow</li>
-            <li>Managed video recording and final delivery of multimedia assets</li>
+            <li>Edited online courses and produced promotional videos, handling full post-production workflow</li>
+            <li>Managed video recording and final delivery of multimedia assets for digital platforms</li>
           </ul>
         </div>
       </section>
@@ -420,8 +419,7 @@
         <article class="project-card">
           <h3>Puntus</h3>
           <ul class="entry-list">
-            <li>Multi-tenant SaaS loyalty platform for Latin American businesses, with Apple/Google Wallet integration</li>
-            <li>Co-founder and full-stack developer; live in production with a no-code rule engine and real-time analytics</li>
+            <li>Multi-tenant SaaS loyalty platform with Apple/Google Wallet integration, no-code rule engine and real-time analytics</li>
           </ul>
           <div class="project-tools"><strong>Tools:</strong> Next.js · NestJS · TypeScript · PostgreSQL · Prisma · Redis · Docker</div>
         </article>
@@ -429,8 +427,7 @@
         <article class="project-card">
           <h3>COC Generator – IDS</h3>
           <ul class="entry-list">
-            <li>Desktop application for generating Certificates of Conformity</li>
-            <li>Ongoing technical support, maintenance, and feature adjustments</li>
+            <li>Desktop application for generating Certificates of Conformity, with ongoing support and maintenance</li>
           </ul>
           <div class="project-tools"><strong>Tools:</strong> NetBeans IDE · Figma · MySQL</div>
         </article>
@@ -438,8 +435,7 @@
         <article class="project-card">
           <h3>AQL Generator – IDS</h3>
           <ul class="entry-list">
-            <li>Quality control application based on AQL international standards</li>
-            <li>Sole developer and support manager throughout the project lifecycle</li>
+            <li>Quality control application based on AQL international standards; sole developer and support manager</li>
           </ul>
           <div class="project-tools"><strong>Tools:</strong> NetBeans IDE · Figma · MySQL</div>
         </article>

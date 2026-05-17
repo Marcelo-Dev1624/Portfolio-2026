@@ -96,14 +96,21 @@
  * Used as a persistent brand marker. Hidden by default — shown on mobile
  * via media query, OR on any breakpoint when the `--always` modifier is
  * present (used in project detail pages to keep brand parity across
- * desktop and mobile). All visual styles live in the base rule so they
- * apply to both cases. */
+ * desktop and mobile).
+ *
+ * Sizes are tuned so the island's vertical center matches the corner
+ * buttons (lang switcher + project-page X) at every breakpoint:
+ *  - Desktop: top: 24px + height: 44px → center Y = 46
+ *  - Mobile:  top: 16px + height: 38px → center Y = 35  */
 .mobile-logo-island {
-  display: none; /* base: hidden until enabled by media or modifier */
+  display: none;
   align-items: center;
   justify-content: center;
   position: fixed;
-  top: 12px;
+  /* Desktop defaults — match the navbar's 44px button row */
+  top: 24px;
+  height: 44px;
+  padding: 8px 22px;
   left: 50%;
   transform: translateX(-50%);
   z-index: 9998;
@@ -112,7 +119,6 @@
   -webkit-backdrop-filter: blur(20px) saturate(180%);
   border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 50px;
-  padding: 8px 18px;
   cursor: pointer;
   transition: transform var(--transition-fast), box-shadow var(--transition-fast);
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
@@ -123,7 +129,7 @@
 }
 
 .mobile-logo-island img {
-  height: 22px;
+  height: 28px;
   width: auto;
 }
 
@@ -137,8 +143,16 @@
     padding-bottom: 70px;
   }
 
-  /* Show the responsive variant on mobile */
+  /* On mobile: smaller island that aligns with the mobile lang switcher
+     (top:16px, 38px tall) so all top-row elements share Y center = 35 */
   .mobile-logo-island {
     display: flex;
+    top: 16px;
+    height: 38px;
+    padding: 6px 18px;
+  }
+
+  .mobile-logo-island img {
+    height: 22px;
   }
 }
