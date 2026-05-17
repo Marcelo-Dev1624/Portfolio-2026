@@ -35,6 +35,12 @@ export default function Footer() {
                 <span>LinkedIn</span>
               </a>
             </li>
+            <li>
+              <a href="https://wa.me/50686627095" target="_blank" rel="noreferrer">
+                <i className="fab fa-whatsapp" />
+                <span>WhatsApp</span>
+              </a>
+            </li>
           </ul>
         </div>
 

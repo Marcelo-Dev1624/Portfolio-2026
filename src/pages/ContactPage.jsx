@@ -67,7 +67,7 @@ export default function ContactPage() {
 
       <section className="contact-v2-section" id="Contact">
 
-        <Reveal className="contact-v2-header">
+        <Reveal eager className="contact-v2-header">
           <p className="about-v2-tag accent">{t('contact.tag')}</p>
           <h1 className="header-text-3 secondary">
             <Trans i18nKey="contact.title" components={{ accent: <span className="accent" /> }} />
@@ -78,6 +78,7 @@ export default function ContactPage() {
         <div className="contact-v2-body">
 
           <Reveal
+            eager
             as="form"
             index={1}
             onSubmit={handleSubmit}
@@ -153,7 +154,7 @@ export default function ContactPage() {
 
           <div className="contact-v2-aside">
 
-            <Reveal className="contact-v2-aside-block" index={2}>
+            <Reveal eager className="contact-v2-aside-block" index={2}>
               <p className="about-v2-tag accent">{t('contact.aside.emailLabel')}</p>
               <button onClick={handleCopyEmail} className="contact-v2-copy-btn">
                 <i className="fa-solid fa-envelope accent"></i>
@@ -162,24 +163,27 @@ export default function ContactPage() {
               {copied && <span className="contact-v2-copied accent">{t('contact.aside.copied')}</span>}
             </Reveal>
 
-            <Reveal className="contact-v2-aside-block" index={3}>
+            <Reveal eager className="contact-v2-aside-block" index={3}>
               <p className="about-v2-tag accent">{t('contact.aside.resumeLabel')}</p>
               <a href="/Marcelo Villalobos - Resume.pdf" download="Marcelo Villalobos - Resume.pdf" className="btn glassmorphism secondary mv-h3">
                 {t('contact.aside.downloadCV')}
               </a>
             </Reveal>
 
-            <Reveal className="contact-v2-aside-block" index={4}>
+            <Reveal eager className="contact-v2-aside-block" index={4}>
               <p className="about-v2-tag accent">{t('contact.aside.socialsLabel')}</p>
               <div className="contact-v2-socials">
-                <a href="https://github.com/marcelo-dev1624" target="_blank" rel="noreferrer" className="social-media-icon secondary glassmorphism">
+                <a href="https://github.com/marcelo-dev1624" target="_blank" rel="noreferrer" className="social-media-icon secondary glassmorphism" aria-label="GitHub">
                   <i className="fab fa-github"></i>
                 </a>
-                <a href="https://instagram.com/marcelo.v1624" target="_blank" rel="noreferrer" className="social-media-icon secondary glassmorphism">
+                <a href="https://instagram.com/marcelo.v1624" target="_blank" rel="noreferrer" className="social-media-icon secondary glassmorphism" aria-label="Instagram">
                   <i className="fab fa-instagram"></i>
                 </a>
-                <a href="https://www.linkedin.com/in/marcelo-villalobos-400965244/" target="_blank" rel="noreferrer" className="social-media-icon secondary glassmorphism">
+                <a href="https://www.linkedin.com/in/marcelo-villalobos-400965244/" target="_blank" rel="noreferrer" className="social-media-icon secondary glassmorphism" aria-label="LinkedIn">
                   <i className="fab fa-linkedin"></i>
+                </a>
+                <a href="https://wa.me/50686627095" target="_blank" rel="noreferrer" className="social-media-icon secondary glassmorphism" aria-label="WhatsApp">
+                  <i className="fab fa-whatsapp"></i>
                 </a>
               </div>
             </Reveal>
