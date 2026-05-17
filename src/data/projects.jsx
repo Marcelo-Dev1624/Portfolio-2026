@@ -3,6 +3,31 @@
 
 export const featuredProjects = [
   {
+    id: 'puntus',
+    title: 'Puntus — Loyalty Platform',
+    style: 'style-1',
+    image: '/images/projects-covers/puntus.png',
+    technologies: [
+      { src: '/images/technologies/react.png', alt: 'React' },
+      { src: '/images/technologies/js.png', alt: 'JavaScript' },
+      { src: '/images/technologies/mongo.png', alt: 'MongoDB' },
+    ],
+    description: (
+      <>
+        I'm <span className="accent">co-founder</span> of{' '}
+        <span className="accent">Puntus</span>, a SaaS loyalty platform helping Latin American
+        businesses run their own digital points-and-rewards programs — accessible directly from{' '}
+        <span className="accent">Apple Wallet</span> and{' '}
+        <span className="accent">Google Wallet</span>, no extra app needed.
+        <br /><br />
+        Behind the scenes: a no-code rule engine, real-time analytics, multi-tenant cloud
+        infrastructure with <span className="accent">AES-256</span> encryption, and POS
+        integrations. Live in production, helping small businesses retain customers.
+      </>
+    ),
+    link: '/projects/puntus',
+  },
+  {
     id: 'coc',
     title: 'COC Generator - IDS',
     style: 'style-2',

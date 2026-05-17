@@ -10,7 +10,14 @@ const NAV_ITEMS = [
 ]
 
 export default function Navbar() {
-  const { isScrolled, activeSection, handleMenuItemClick } = useNavBehavior()
+  const {
+    isScrolled,
+    isCompact,
+    activeSection,
+    handleMenuItemClick,
+    handleNavMouseEnter,
+    handleNavMouseLeave,
+  } = useNavBehavior()
 
   const indicatorRef = useRef(null)
   const menuListRef  = useRef(null)
@@ -51,7 +58,11 @@ export default function Navbar() {
     <>
       {/* Desktop navbar */}
       <div className="desktop-nav">
-        <div className={`inner-nav${isScrolled ? ' scrolled' : ''}`}>
+        <div
+          className={`inner-nav${isScrolled ? ' scrolled' : ''}${isCompact ? ' compact' : ''}`}
+          onMouseEnter={handleNavMouseEnter}
+          onMouseLeave={handleNavMouseLeave}
+        >
           <a className="nav-logo" onClick={() => handleClick(NAV_ITEMS[0])} style={{ cursor: 'pointer' }}>
             <img src="/images/logo_completo_blanco.png" alt="MarceloDev" />
           </a>

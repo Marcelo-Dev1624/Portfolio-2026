@@ -1,34 +1,10 @@
-/* MAIN CSS FILE — imported once in main.jsx */
-
-/* Base */
-@import url('./base/variables.css');
-@import url('./base/reset.css');
-@import url('./base/typography.css');
-@import url('./base/utilities.css');
-
-/* Components */
-@import url('./components/buttons.css');
-@import url('./components/navigation.css');
-@import url('./components/forms.css');
-
-/* Layout */
-@import url('./layout/footer.css');
-
-/* Pages */
-@import url('./pages/home.css');
-@import url('./pages/about.css');
-@import url('./pages/projects.css');
-@import url('./pages/contact.css');
-@import url('./pages/project-detailed.css');
-
-/* Animations */
-@import url('./animations/loading.css');
-@import url('./animations/keyframes.css');
-
-/* Responsive */
-@import url('./responsive/mobile.css');
-@import url('./responsive/tablet.css');
-
-/* Background effects */
-@import url('./bg.css');
-@import url('./cubes.css');
+/* DEPRECATED — kept only as documentation.
+ *
+ * CSS files are now imported individually from main.jsx so that Vite's HMR
+ * can hot-reload each one in isolation. Previously this file used
+ * `@import url(...)` which Vite handles poorly: changes to imported files
+ * would not propagate to the browser until a full dev-server restart.
+ *
+ * Don't add `@import url(...)` here. Add a new `import './path/to/file.css'`
+ * in main.jsx instead.
+ */
