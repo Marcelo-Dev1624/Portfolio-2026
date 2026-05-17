@@ -1,77 +1,52 @@
-/* LOADING ANIMATIONS */
+/* LOADING ANIMATIONS
+ *
+ * Pure CSS transitions (no keyframe animations) so there's nothing
+ * competing on the same property at the same time. Class flips drive
+ * the opacity changes — the transitions handle the interpolation.
+ *
+ * Timing budget (matches the useLoadingAnimation hook):
+ *   0–100ms   blank
+ *   100–600   white logo fades in     (400ms transition)
+ *   600–1100  cross-fade to green     (400ms transition on both)
+ *   1100–1500 overlay fades away      (400ms transition)
+ *   1500      component unmounts
+ *
+ * Both the green logo and the overlay are still visible during the
+ * fadeout phase; the overlay's opacity going to 0 carries the logo
+ * with it (children inherit the parent's effective opacity). */
 
 #onload-animation {
-  display: block;
   position: fixed;
-  top: 0;
-  opacity: 1;
+  inset: 0;
   background: var(--color-primary-100);
   z-index: 9999999;
-  height: 100%;
-  width: 100%;
-  overflow-y: hidden;
-  transition: opacity 800ms ease, top 800ms ease;
-
-  &.onload {
-    opacity: 0;
-    top: -10px;
-    overflow-y: hidden !important;
-    pointer-events: none;
-  }
+  opacity: 1;
+  /* transform animates on the GPU; nicer than animating `top` */
+  transform: translateY(0);
+  transition:
+    opacity 400ms ease-out,
+    transform 400ms ease-out;
 }
 
-#animation-logo-white {
-  display: block;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 15%;
+#onload-animation.onload {
   opacity: 0;
-  transition: opacity 400ms ease-in-out;
-  -webkit-transition: opacity 400ms ease-in-out;
-
-  &.fadeIn {
-    opacity: 1;
-    animation: fadeIn 300ms ease-in-out;
-    -webkit-animation: fadeIn 300ms ease-in-out;
-    animation-fill-mode: both;
-    -webkit-animation-fill-mode: both;
-  }
-
-  &.fadeOut {
-    opacity: 0;
-    animation: fadeOut 300ms ease-in-out;
-    -webkit-animation: fadeOut 300ms ease-in-out;
-    animation-fill-mode: both;
-    -webkit-animation-fill-mode: both;
-  }
+  transform: translateY(-10px);
+  pointer-events: none;
 }
 
+#animation-logo-white,
 #animation-logo-green {
-  display: block;
-  width: 15%;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  width: 15%;
+  max-width: 220px;
   opacity: 0;
   transition: opacity 400ms ease-in-out;
-  -webkit-transition: opacity 400ms ease-in-out;
+}
 
-  &.fadeIn {
-    opacity: 1;
-    animation: fadeIn 300ms ease-in-out;
-    -webkit-animation: fadeIn 300ms ease-in-out;
-    animation-fill-mode: both;
-    -webkit-animation-fill-mode: both;
-  }
-
-  &.fadeOut {
-    opacity: 0;
-    animation: fadeOut 300ms ease-in-out;
-    -webkit-animation: fadeOut 300ms ease-in-out;
-    animation-fill-mode: both;
-    -webkit-animation-fill-mode: both;
-  }
+#animation-logo-white.is-visible,
+#animation-logo-green.is-visible {
+  opacity: 1;
 }
