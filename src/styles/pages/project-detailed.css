@@ -7,8 +7,11 @@
   top: 0;
   z-index: 1000;
   background-color: var(--color-primary-100);
-  padding: 1rem;
-  
+  /* 24px top/bottom puts the 44px content row centered at Y=46px — same
+     as the language switcher (top:24px + height:44/2 = 46), so logo,
+     close-X and switcher all sit on the same horizontal line. */
+  padding: 24px 1rem;
+
   & .inner-navbar {
     width: 90%;
     max-width: 1200px;
@@ -17,11 +20,15 @@
     justify-content: space-between;
     align-items: center;
   }
-  
+
   & .logo {
+    display: flex;
+    align-items: center;
+
     & img {
-      width: 50px;
-      height: auto;
+      /* 44px tall to match the close button and language switcher */
+      height: 44px;
+      width: auto;
     }
   }
   
@@ -243,12 +250,21 @@
   }
   
   .navbar {
+    /* Tighter top/bottom padding on smaller screens */
+    padding: 16px 1rem;
+
     & .inner-navbar {
       width: 95%;
+      /* With logo hidden below, this keeps the close button hugging the right
+         edge instead of jumping to the left (which space-between does with
+         a single flex item). */
+      justify-content: flex-end;
     }
-    
-    & .logo img {
-      width: 40px;
+
+    /* The floating MobileLogo island already shows the brand at the top,
+       so the navbar's left logo is redundant on small screens. */
+    & .logo {
+      display: none;
     }
   }
 }
