@@ -110,7 +110,7 @@
   /* Desktop defaults — match the navbar's 44px button row */
   top: 24px;
   height: 44px;
-  padding: 8px 22px;
+  padding: 10px 28px;
   left: 50%;
   transform: translateX(-50%);
   z-index: 9998;
@@ -129,7 +129,7 @@
 }
 
 .mobile-logo-island img {
-  height: 28px;
+  height: 22px; /* leaves ~11px breathing space top/bottom inside the 44px pill */
   width: auto;
 }
 
@@ -149,10 +149,10 @@
     display: flex;
     top: 16px;
     height: 38px;
-    padding: 6px 18px;
+    padding: 9px 22px;
   }
 
   .mobile-logo-island img {
-    height: 22px;
+    height: 18px; /* a bit smaller than desktop, with extra side padding for breathing */
   }
 }
