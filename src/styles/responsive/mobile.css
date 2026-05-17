@@ -246,7 +246,10 @@
       width: 100%;
       max-width: 60%;
       z-index: 1;
-      animation: float 5s ease-in-out infinite;
+      /* No `animation` here — the .hero-memoji class on this img already
+         chains hero-image-in (fades opacity from 0 → 1) into the infinite
+         float. Setting animation here would override and leave the memoji
+         stuck at opacity 0. */
     }
   }
 
