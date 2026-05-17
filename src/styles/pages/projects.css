@@ -57,8 +57,10 @@
 .project {
   margin: 5rem 0;
   transition: var(--transition-normal);
-  height: 28rem;
-  width: 85%;
+  /* Narrower + taller proportions — feels less stretched horizontally */
+  height: 32rem;
+  width: 75%;
+  max-width: 1000px;
   gap: 2px;
 
   /* Common styles for both styles */
