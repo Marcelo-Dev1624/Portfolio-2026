@@ -11,9 +11,9 @@
     "location": "San José, Costa Rica"
   },
   "about": {
-    "tag": "Desarrollador Full-Stack Junior",
-    "title": "Apasionado por construir cosas que <accent>se ven bien</accent> y <accent>funcionan bien.</accent>",
-    "bio": "Soy <accent>Marcelo Villalobos</accent>, vivo en Costa Rica y estoy terminando mi carrera en Ciencias de la Computación. Mi pasión está en el front-end y el diseño, pero cuando se trata de construir, voy de extremo a extremo.<br/><br/>Tengo experiencia real gracias a <accent>IDS</accent>, y este año estoy expandiéndome a proyectos colaborativos, apoyando productos de amigos, y tomando mis propios clientes.",
+    "tag": "Ingeniero de Software Full-Stack",
+    "title": "Construyendo productos donde el <accent>diseño</accent> se encuentra con la <accent>ingeniería.</accent>",
+    "bio": "Soy <accent>Marcelo Villalobos</accent>, Ingeniero de Software de Costa Rica. Trabajo en todo el stack — construyendo interfaces que se sienten bien y backends que aguantan carga real.<br/><br/>Co-fundador e ingeniero de <accent>Puntus</accent>, una plataforma SaaS de lealtad en producción, sirviendo negocios reales en Latinoamérica.",
     "stats": {
       "years": "Años codeando",
       "projects": "Proyectos construidos",
@@ -62,7 +62,7 @@
     "whatsappMessage": "¡Hola Marcelo! Te escribo desde tu portafolio."
   },
   "footer": {
-    "tagline": "Construyendo cosas que <accent>se ven bien</accent> y <accent>funcionan bien.</accent>",
+    "tagline": "Productos full-stack, <accent>diseñados</accent> e <accent>ingeniados.</accent>",
     "socialsTitle": "Mis redes",
     "ctaTitle": "¿Quieres trabajar conmigo?",
     "ctaText": "Abierto a clientes, colaboraciones y nuevas ideas.",
@@ -75,6 +75,16 @@
     "close": "Cerrar proyecto"
   },
   "projects": {
+    "osullivan": {
+      "title": "O'Sullivan Culinary",
+      "cardDescription": "Plataforma de cursos full-stack construida para una <accent>escuela culinaria costarricense</accent> real. Gestiona catálogo de cursos, autenticación y compras — integrada con <accent>Thinkific</accent> para entrega de contenido y <accent>Tilopay</accent> como pasarela de pago.<br/><br/>Incluye un sistema personalizado de <accent>slots de imagen</accent> vía Cloudinary y un panel admin completo: CRUD de cursos, gestión de pedidos y seguimiento de acceso por usuario.",
+      "detail": {
+        "heading1": "Un cliente real, un producto completo",
+        "body1": "<accent>O'Sullivan Culinary</accent> necesitaba una plataforma de comercio completa para vender cursos de cocina en línea en toda Latinoamérica. Construí el producto entero: sitio público con catálogo de cursos, registro de usuarios, checkout y gestión de acceso post-compra.<br/><br/>Las compras van por dos canales: directamente en la web por usuarios registrados, o a través de un vendedor por WhatsApp que procesa pedidos en nombre del cliente. La entrega de contenido la maneja <accent>Thinkific</accent> — el sitio es la vitrina, Thinkific es el aula.",
+        "heading2": "Decisiones de ingeniería",
+        "body2": "Stack: <accent>React 19</accent> + <accent>Tailwind 4</accent> en el frontend, <accent>Node.js</accent> + <accent>Express</accent> en el backend, <accent>MongoDB</accent> para persistencia, y <accent>Cloudinary</accent> para todos los medios.<br/><br/>La pieza más interesante es el <accent>sistema de slots de imagen</accent>: cada imagen en todo el sitio — banners, miniaturas de cursos, galería — se gestiona desde el panel admin mediante una abstracción de slots. Sin rutas hardcodeadas. Cambia imágenes en tiempo real sin tocar código.<br/><br/>El panel admin cubre CRUD de cursos con modalidad de acceso (pago único, trimestral), gestión de pedidos, y un portal por usuario que rastrea historial de compras y fechas de vencimiento de acceso."
+      }
+    },
     "puntus": {
       "title": "Puntus — Plataforma de Lealtad",
       "cardDescription": "<accent>Co-fundador y desarrollador</accent> de <accent>Puntus</accent> — una plataforma SaaS de lealtad que ayuda a negocios de Latinoamérica a tener su propio programa digital de puntos y recompensas, accesible directamente desde <accent>Apple Wallet</accent> y <accent>Google Wallet</accent> sin necesidad de descargar otra app.<br/><br/>Involucrado <accent>de principio a fin</accent>: decisiones de producto, arquitectura, y escribiendo el código que mueve el motor de reglas no-code, la analítica en tiempo real, y la infraestructura cloud multi-tenant con encriptación <accent>AES-256</accent>. En producción hoy mismo.",

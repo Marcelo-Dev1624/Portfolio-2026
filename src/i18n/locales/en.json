@@ -11,9 +11,9 @@
     "location": "San Jose, Costa Rica"
   },
   "about": {
-    "tag": "Junior Full-Stack Developer",
-    "title": "Passionate about building things that <accent>look great</accent> and <accent>work great.</accent>",
-    "bio": "I'm <accent>Marcelo Villalobos</accent>, based in Costa Rica and currently finishing my Computer Science degree. My passion lives in front-end and design — but when it comes to building, I go end-to-end.<br/><br/>I have real-world experience through <accent>IDS</accent>, and this year I'm expanding into collaborative projects, supporting friends' products, and taking on my own clients.",
+    "tag": "Full-Stack Software Engineer",
+    "title": "Building full-stack products where <accent>design</accent> meets <accent>engineering.</accent>",
+    "bio": "I'm <accent>Marcelo Villalobos</accent>, a Software Engineer from Costa Rica. I work across the full stack — building interfaces that feel right and backends built to handle real load.<br/><br/>Co-founder and engineer of <accent>Puntus</accent>, a SaaS loyalty platform live in production, serving real businesses across Latin America.",
     "stats": {
       "years": "Years coding",
       "projects": "Projects built",
@@ -62,7 +62,7 @@
     "whatsappMessage": "Hi Marcelo! I'm reaching out from your portfolio."
   },
   "footer": {
-    "tagline": "Building things that <accent>look great</accent> and <accent>work great.</accent>",
+    "tagline": "Full-stack products, <accent>designed</accent> and <accent>engineered.</accent>",
     "socialsTitle": "My Socials",
     "ctaTitle": "Wanna work together?",
     "ctaText": "Open to clients, collaborations and new ideas.",
@@ -75,6 +75,16 @@
     "close": "Close project"
   },
   "projects": {
+    "osullivan": {
+      "title": "O'Sullivan Culinary",
+      "cardDescription": "Full-stack course platform built for a real <accent>Costa Rican culinary school</accent>. Handles course catalog, user auth, and purchases — integrated with <accent>Thinkific</accent> for content delivery and <accent>Tilopay</accent> as the payment gateway.<br/><br/>Includes a custom <accent>image slot system</accent> via Cloudinary and a complete admin panel: course CRUD, order management, and per-user access tracking.",
+      "detail": {
+        "heading1": "A real client, a complete product",
+        "body1": "<accent>O'Sullivan Culinary</accent> needed a full commerce platform to sell online cooking courses across Latin America. I built the entire product: public site with course catalog, user registration, checkout, and post-purchase access management.<br/><br/>Purchases go through two channels: directly on the web by registered users, or through a WhatsApp seller who processes orders on the client's behalf. Content delivery is handled by <accent>Thinkific</accent> — the site is the storefront, Thinkific is the classroom.",
+        "heading2": "Engineering decisions",
+        "body2": "Stack: <accent>React 19</accent> + <accent>Tailwind 4</accent> on the frontend, <accent>Node.js</accent> + <accent>Express</accent> on the backend, <accent>MongoDB</accent> for persistence, and <accent>Cloudinary</accent> for all media.<br/><br/>The most interesting piece is the <accent>image slot system</accent>: every image across the entire site — hero banners, course thumbnails, gallery — is managed from the admin panel through a slot abstraction. No hardcoded paths. Swap images at runtime without touching code.<br/><br/>The admin panel covers course CRUD with access modality (one-time, quarterly), order management, and a per-user portal tracking purchase history and access expiry dates."
+      }
+    },
     "puntus": {
       "title": "Puntus — Loyalty Platform",
       "cardDescription": "<accent>Co-founder & developer</accent> of <accent>Puntus</accent> — a SaaS loyalty platform helping Latin American businesses run their own digital points-and-rewards programs, accessible directly from <accent>Apple Wallet</accent> and <accent>Google Wallet</accent> with no extra app required.<br/><br/>Involved <accent>end-to-end</accent>: product decisions, architecture, and writing the code that powers the no-code rule engine, real-time analytics, and a multi-tenant cloud setup with <accent>AES-256</accent> encryption. Live in production today.",

@@ -17,8 +17,20 @@ export const featuredProjects = [
     link: '/projects/puntus',
   },
   {
-    id: 'coc',
+    id: 'osullivan',
     style: 'style-2',
+    image: '/images/projects-covers/osullivan.png',
+    technologies: [
+      { src: '/images/technologies/react.png', alt: 'React' },
+      { src: '/images/technologies/nodejs.png', alt: 'Node.js' },
+      { src: '/images/technologies/mongo.png', alt: 'MongoDB' },
+      { src: '/images/technologies/tailwind.png', alt: 'Tailwind CSS' },
+    ],
+    link: '/projects/osullivan',
+  },
+  {
+    id: 'coc',
+    style: 'style-1',
     image: '/images/projects-covers/IDS.png',
     technologies: [
       { src: '/images/technologies/java.png', alt: 'Java' },
@@ -27,9 +39,15 @@ export const featuredProjects = [
     ],
     link: '/projects/coc',
   },
+]
+
+// "Early Work" — projects from when learning the basics.
+// Kept separate from main work so the portfolio doesn't dilute the strong ones,
+// but still shown on /projects under their own clearly-labelled section.
+export const earlyProjects = [
   {
     id: 'aql',
-    style: 'style-1',
+    style: 'style-2',
     image: '/images/projects-covers/AQL.png',
     technologies: [
       { src: '/images/technologies/java.png', alt: 'Java' },
@@ -37,12 +55,6 @@ export const featuredProjects = [
     ],
     link: '/projects/aql',
   },
-]
-
-// "Early Work" — projects from when learning the basics.
-// Kept separate from main work so the portfolio doesn't dilute the strong ones,
-// but still shown on /projects under their own clearly-labelled section.
-export const earlyProjects = [
   {
     id: 'calorie-calculator',
     style: 'style-2',

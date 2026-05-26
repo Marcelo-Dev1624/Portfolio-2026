@@ -16,6 +16,7 @@ import './styles/components/buttons.css'
 import './styles/components/navigation.css'
 import './styles/components/forms.css'
 import './styles/components/lang-switcher.css'
+import './styles/components/cube-background.css'
 // Layout
 import './styles/layout/footer.css'
 // Pages
@@ -30,9 +31,6 @@ import './styles/animations/keyframes.css'
 // Responsive — must come AFTER components/pages so media queries override correctly
 import './styles/responsive/mobile.css'
 import './styles/responsive/tablet.css'
-// Background effects
-import './styles/bg.css'
-import './styles/cubes.css'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>

@@ -9,6 +9,7 @@
 
 body {
   background-color: var(--color-primary-100);
+  background-color: var(--color-primary-100);
   font-family: var(--font-family-primary);
   color: var(--color-secondary-100);
   transition: var(--transition-normal);

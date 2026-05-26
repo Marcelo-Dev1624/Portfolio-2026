@@ -1,0 +1,36 @@
+/* Cube background — paired with src/components/CubeBackground.jsx
+ *
+ * Self-contained. All cube animation styles live here so visual tweaks
+ * (opacity, scale, rotation, timing) can be made without touching other files.
+ *
+ * The component sets per-cube CSS custom properties via inline style:
+ *   --cube-opacity  → peak opacity during visible phase
+ *   --cube-scale    → max scale at end of growth
+ *   --cube-rotate   → base rotation angle
+ */
+
+.cube-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.cube-bg__cube {
+  position: absolute;
+  opacity: 0;                          /* hidden by default — prevents flash before animation-delay starts */
+  animation: cube-appear ease-in-out infinite;
+  animation-fill-mode: backwards;      /* take on 0% keyframe state during the delay period */
+  will-change: opacity, transform;
+}
+
+@keyframes cube-appear {
+  0%   { opacity: 0;                     transform: scale(0)                   rotate(0deg); }
+  25%  { opacity: var(--cube-opacity);   transform: scale(1)                   rotate(calc(var(--cube-rotate) * 0.3)); }
+  75%  { opacity: var(--cube-opacity);   transform: scale(var(--cube-scale))   rotate(var(--cube-rotate)); }
+  100% { opacity: 0;                     transform: scale(var(--cube-scale))   rotate(calc(var(--cube-rotate) * 1.6)); }
+}

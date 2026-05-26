@@ -21,13 +21,6 @@ export default function HomeSection() {
         </div>
         <img src="/images/memoji.png" alt="Marcelo memoji" className="hero-memoji" />
       </div>
-
-      {/* Animated floating background circles */}
-      <div className="bg-area-index">
-        <ul className="bg-circles">
-          {[...Array(10)].map((_, i) => <li key={i} />)}
-        </ul>
-      </div>
     </section>
   )
 }

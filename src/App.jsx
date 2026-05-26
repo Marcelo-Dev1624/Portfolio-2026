@@ -6,23 +6,27 @@ import ProjectPuntus from './pages/projects/ProjectPuntus'
 import ProjectCOC from './pages/projects/ProjectCOC'
 import ProjectAQL from './pages/projects/ProjectAQL'
 import ProjectCalorieCalculator from './pages/projects/ProjectCalorieCalculator'
+import ProjectOSullivan from './pages/projects/ProjectOSullivan'
 import ProjectAestheticClock from './pages/projects/ProjectAestheticClock'
 import LangSwitcher from './components/LangSwitcher'
+import CubeBackground from './components/CubeBackground'
 
 export default function App() {
   return (
-    <>
+    <div style={{ position: 'relative' }}>
+      <CubeBackground />
       <Routes>
         <Route path="/" element={<MainPage />} />
         <Route path="/contact" element={<ContactPage />} />
         <Route path="/projects" element={<ProjectsPage />} />
         <Route path="/projects/puntus" element={<ProjectPuntus />} />
+        <Route path="/projects/osullivan" element={<ProjectOSullivan />} />
         <Route path="/projects/coc" element={<ProjectCOC />} />
         <Route path="/projects/aql" element={<ProjectAQL />} />
         <Route path="/projects/calorie-calculator" element={<ProjectCalorieCalculator />} />
         <Route path="/projects/aesthetic-clock" element={<ProjectAestheticClock />} />
       </Routes>
       <LangSwitcher />
-    </>
+    </div>
   )
 }
