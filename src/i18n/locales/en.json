@@ -37,6 +37,10 @@
     "tag": "Get in touch",
     "title": "Let's build something <accent>great together.</accent>",
     "subtitle": "Ready to bring your project to life? I'm open to clients, collaborations and new ideas.",
+    "tabs": {
+      "message": "Send a message",
+      "book": "Book a call"
+    },
     "form": {
       "name": "Your name",
       "namePlaceholder": "Marcelo Villalobos",

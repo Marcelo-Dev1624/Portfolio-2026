@@ -37,6 +37,10 @@
     "tag": "Hablemos",
     "title": "Construyamos algo <accent>juntos.</accent>",
     "subtitle": "¿Listo para darle vida a tu proyecto? Estoy abierto a clientes, colaboraciones y nuevas ideas.",
+    "tabs": {
+      "message": "Enviar mensaje",
+      "book": "Agendar llamada"
+    },
     "form": {
       "name": "Tu nombre",
       "namePlaceholder": "Marcelo Villalobos",

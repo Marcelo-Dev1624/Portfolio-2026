@@ -33,9 +33,88 @@
   align-items: flex-start;
 }
 
+/* Main column wraps tabs + active panel */
+.contact-v2-main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  min-width: 0;
+}
+
+/* Tabs — editorial underline style, matches navbar aesthetic */
+.contact-v2-tabs {
+  display: flex;
+  gap: 2.5rem;
+  border-bottom: 1px solid var(--color-secondary-20);
+  margin-bottom: 0.5rem;
+  padding-left: 0.25rem;
+}
+
+.contact-v2-tab {
+  position: relative;
+  background: transparent;
+  border: none;
+  color: var(--color-secondary-60);
+  font-family: var(--font-family-primary);
+  font-size: 1rem;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+  padding: 0.85rem 0;
+  cursor: pointer;
+  transition: color var(--transition-normal);
+  display: inline-flex;
+  align-items: center;
+}
+
+.contact-v2-tab::after {
+  content: '';
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: var(--accent-color);
+  transform: scaleX(0);
+  transform-origin: center;
+  transition: transform 0.35s ease;
+}
+
+.contact-v2-tab:hover {
+  color: var(--color-secondary-100);
+}
+
+.contact-v2-tab.active {
+  color: var(--accent-color);
+}
+
+.contact-v2-tab.active::after {
+  transform: scaleX(1);
+}
+
+/* Cal.com embed wrapper */
+.contact-v2-cal {
+  border-radius: 15px;
+  padding: 0;
+  overflow: hidden;
+  min-height: 640px;
+  height: 70vh;
+  max-height: 800px;
+}
+
+.cal-embed-wrap {
+  width: 100%;
+  height: 100%;
+  min-height: inherit;
+}
+
+.cal-embed-wrap iframe {
+  border-radius: 15px;
+}
+
 /* Form */
 .contact-v2-form {
-  flex: 1;
+  width: 100%;
   display: flex;
   flex-direction: column;
   gap: 1.25rem;
@@ -218,9 +297,35 @@
     gap: 2rem;
   }
 
+  .contact-v2-main {
+    width: 100%;
+  }
+
+  .contact-v2-tabs {
+    gap: 1.25rem;
+    justify-content: center;
+    padding-left: 0;
+  }
+
+  .contact-v2-tab {
+    font-size: 0.95rem;
+    padding: 0.7rem 0;
+  }
+
+  .contact-v2-cal {
+    min-height: 520px;
+    height: auto;
+    max-height: none;
+  }
+
+  .cal-embed-wrap {
+    min-height: 520px;
+  }
+
   .contact-v2-form {
-  width: 100% !important;
-}
+    width: 100% !important;
+    padding: 1.5rem;
+  }
 
   .contact-v2-row {
     flex-direction: column;

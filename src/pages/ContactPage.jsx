@@ -4,12 +4,14 @@ import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
 import MobileLogo from '../components/MobileLogo'
 import Reveal from '../components/Reveal'
+import CalEmbed from '../components/CalEmbed'
 
 export default function ContactPage() {
   const { t } = useTranslation()
   const [copied, setCopied] = useState(false)
   const [status, setStatus] = useState('idle') // idle | sending | success | error
   const [errorMsg, setErrorMsg] = useState('')
+  const [activeTab, setActiveTab] = useState('message') // 'message' | 'book'
 
   const handleCopyEmail = () => {
     navigator.clipboard.writeText('contact@marcelodev.es').then(() => {
@@ -80,8 +82,36 @@ export default function ContactPage() {
 
         <div className="contact-v2-body">
 
+          <div className="contact-v2-main">
+            <div className="contact-v2-tabs" role="tablist" aria-label="Contact options">
+              <button
+                role="tab"
+                aria-selected={activeTab === 'message'}
+                className={`contact-v2-tab${activeTab === 'message' ? ' active' : ''}`}
+                onClick={() => setActiveTab('message')}
+              >
+                <i className="fa-regular fa-envelope mr-2"></i>
+                {t('contact.tabs.message')}
+              </button>
+              <button
+                role="tab"
+                aria-selected={activeTab === 'book'}
+                className={`contact-v2-tab${activeTab === 'book' ? ' active' : ''}`}
+                onClick={() => setActiveTab('book')}
+              >
+                <i className="fa-regular fa-calendar mr-2"></i>
+                {t('contact.tabs.book')}
+              </button>
+            </div>
+
+            {activeTab === 'book' ? (
+              <Reveal eager key="cal" className="contact-v2-cal glassmorphism">
+                <CalEmbed />
+              </Reveal>
+            ) : (
           <Reveal
             eager
+            key="form"
             as="form"
             index={1}
             onSubmit={handleSubmit}
@@ -154,6 +184,8 @@ export default function ContactPage() {
               </p>
             )}
           </Reveal>
+            )}
+          </div>
 
           <div className="contact-v2-aside">
 
