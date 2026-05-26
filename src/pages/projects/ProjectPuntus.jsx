@@ -1,5 +1,8 @@
 import { Trans, useTranslation } from 'react-i18next'
 import ProjectDetailLayout from '../ProjectDetailLayout'
+import SEO from '../../components/SEO'
+
+const stripHtml = (s) => s.replace(/<[^>]+>/g, '').replace(/\s+/g, ' ').trim().slice(0, 200)
 
 const technologies = [
   { src: '/images/technologies/nextjs-icon.svg', alt: 'Next.js' },
@@ -15,6 +18,14 @@ const technologies = [
 export default function ProjectPuntus() {
   const { t } = useTranslation()
   return (
+    <>
+      <SEO
+        title={t('projects.puntus.title')}
+        description={stripHtml(t('projects.puntus.cardDescription'))}
+        path="/projects/puntus"
+        image="/images/projects-covers/puntus-org.jpg"
+        type="article"
+      />
     <ProjectDetailLayout title={t('projects.puntus.title')} technologies={technologies}>
       <div className="image-and-description">
         <img src="/images/projects-covers/puntus-org.jpg" alt={t('projects.puntus.title')} />
@@ -47,5 +58,6 @@ export default function ProjectPuntus() {
         </div>
       </div>
     </ProjectDetailLayout>
+    </>
   )
 }

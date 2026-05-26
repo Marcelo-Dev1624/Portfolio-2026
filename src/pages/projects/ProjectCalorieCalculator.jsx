@@ -1,5 +1,8 @@
 import { Trans, useTranslation } from 'react-i18next'
 import ProjectDetailLayout from '../ProjectDetailLayout'
+import SEO from '../../components/SEO'
+
+const stripHtml = (s) => s.replace(/<[^>]+>/g, '').replace(/\s+/g, ' ').trim().slice(0, 200)
 
 const technologies = [
   { src: '/images/technologies/react.png', alt: 'React' },
@@ -10,6 +13,14 @@ const technologies = [
 export default function ProjectCalorieCalculator() {
   const { t } = useTranslation()
   return (
+    <>
+      <SEO
+        title={t('projects.calorie-calculator.title')}
+        description={stripHtml(t('projects.calorie-calculator.cardDescription'))}
+        path="/projects/calorie-calculator"
+        image="/images/projects-covers/Calorie_Calculator.png"
+        type="article"
+      />
     <ProjectDetailLayout title={t('projects.calorie-calculator.title')} technologies={technologies}>
       <div className="image-and-description">
         <img src="/images/projects-covers/Calorie_Calculator.png" alt={t('projects.calorie-calculator.title')} />
@@ -42,5 +53,6 @@ export default function ProjectCalorieCalculator() {
         </div>
       </div>
     </ProjectDetailLayout>
+    </>
   )
 }

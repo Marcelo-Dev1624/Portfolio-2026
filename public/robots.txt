@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+
+# Disallow API endpoints from indexing
+Disallow: /api/
+
+# Sitemap location
+Sitemap: https://marcelodev.es/sitemap.xml

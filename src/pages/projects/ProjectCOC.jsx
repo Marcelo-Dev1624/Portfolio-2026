@@ -1,5 +1,8 @@
 import { Trans, useTranslation } from 'react-i18next'
 import ProjectDetailLayout from '../ProjectDetailLayout'
+import SEO from '../../components/SEO'
+
+const stripHtml = (s) => s.replace(/<[^>]+>/g, '').replace(/\s+/g, ' ').trim().slice(0, 200)
 
 const technologies = [
   { src: '/images/technologies/java.png', alt: 'Java' },
@@ -10,6 +13,14 @@ const technologies = [
 export default function ProjectCOC() {
   const { t } = useTranslation()
   return (
+    <>
+      <SEO
+        title={t('projects.coc.title')}
+        description={stripHtml(t('projects.coc.cardDescription'))}
+        path="/projects/coc"
+        image="/images/projects-covers/IDS.png"
+        type="article"
+      />
     <ProjectDetailLayout title={t('projects.coc.title')} technologies={technologies}>
       <div className="image-and-description">
         <img src="/images/projects-covers/IDS.png" alt={t('projects.coc.title')} />
@@ -40,5 +51,6 @@ export default function ProjectCOC() {
         ></iframe>
       </div>
     </ProjectDetailLayout>
+    </>
   )
 }

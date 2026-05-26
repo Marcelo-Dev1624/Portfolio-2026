@@ -5,6 +5,7 @@ import Footer from '../components/Footer'
 import MobileLogo from '../components/MobileLogo'
 import Reveal from '../components/Reveal'
 import CalEmbed from '../components/CalEmbed'
+import SEO from '../components/SEO'
 
 export default function ContactPage() {
   const { t } = useTranslation()
@@ -65,8 +66,15 @@ export default function ContactPage() {
   // WhatsApp deeplink with a pre-filled message in the current language
   const whatsappUrl = `https://wa.me/50686627095?text=${encodeURIComponent(t('contact.whatsappMessage'))}`
 
+  const isEs = t('home.greeting') === 'Hola'
+  const seoTitle = isEs ? 'Contacto' : 'Contact'
+  const seoDesc = isEs
+    ? 'Contáctame para colaboraciones, proyectos y nuevas ideas. Agenda una llamada de 30 minutos o envíame un mensaje.'
+    : 'Get in touch for collaborations, projects and new ideas. Book a 30-minute call or send me a message.'
+
   return (
     <>
+      <SEO title={seoTitle} description={seoDesc} path="/contact" />
       <Navbar />
       <MobileLogo />
 

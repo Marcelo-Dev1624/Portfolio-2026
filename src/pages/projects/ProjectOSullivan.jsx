@@ -1,5 +1,8 @@
 import { Trans, useTranslation } from 'react-i18next'
 import ProjectDetailLayout from '../ProjectDetailLayout'
+import SEO from '../../components/SEO'
+
+const stripHtml = (s) => s.replace(/<[^>]+>/g, '').replace(/\s+/g, ' ').trim().slice(0, 200)
 
 const technologies = [
   { src: '/images/technologies/react.png', alt: 'React' },
@@ -12,6 +15,14 @@ const technologies = [
 export default function ProjectOSullivan() {
   const { t } = useTranslation()
   return (
+    <>
+      <SEO
+        title={t('projects.osullivan.title')}
+        description={stripHtml(t('projects.osullivan.cardDescription'))}
+        path="/projects/osullivan"
+        image="/images/projects-covers/osullivan.png"
+        type="article"
+      />
     <ProjectDetailLayout title={t('projects.osullivan.title')} technologies={technologies}>
       <div className="image-and-description">
         <img src="/images/projects-covers/osullivan.png" alt={t('projects.osullivan.title')} />
@@ -44,5 +55,6 @@ export default function ProjectOSullivan() {
         </div>
       </div>
     </ProjectDetailLayout>
+    </>
   )
 }

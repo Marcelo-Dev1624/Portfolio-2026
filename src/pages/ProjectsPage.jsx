@@ -4,13 +4,20 @@ import Footer from '../components/Footer'
 import MobileLogo from '../components/MobileLogo'
 import ProjectCard from '../components/ProjectCard'
 import Reveal from '../components/Reveal'
+import SEO from '../components/SEO'
 import { featuredProjects, earlyProjects } from '../data/projects'
 
 export default function ProjectsPage() {
-  const { t } = useTranslation()
+  const { t, i18n } = useTranslation()
+  const isEs = i18n.language?.startsWith('es')
+  const title = isEs ? 'Proyectos' : 'Projects'
+  const description = isEs
+    ? 'Proyectos de Marcelo Villalobos: Puntus (SaaS de lealtad), O\'Sullivan Culinary (plataforma de cursos), proyectos para IDS, y más.'
+    : 'Projects by Marcelo Villalobos: Puntus (SaaS loyalty platform), O\'Sullivan Culinary (course platform), IDS internal tools, and more.'
 
   return (
     <>
+      <SEO title={title} description={description} path="/projects" />
       <Navbar />
       <MobileLogo />
 

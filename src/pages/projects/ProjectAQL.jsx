@@ -1,5 +1,8 @@
 import { Trans, useTranslation } from 'react-i18next'
 import ProjectDetailLayout from '../ProjectDetailLayout'
+import SEO from '../../components/SEO'
+
+const stripHtml = (s) => s.replace(/<[^>]+>/g, '').replace(/\s+/g, ' ').trim().slice(0, 200)
 
 const technologies = [
   { src: '/images/technologies/java.png', alt: 'Java' },
@@ -9,6 +12,14 @@ const technologies = [
 export default function ProjectAQL() {
   const { t } = useTranslation()
   return (
+    <>
+      <SEO
+        title={t('projects.aql.title')}
+        description={stripHtml(t('projects.aql.cardDescription'))}
+        path="/projects/aql"
+        image="/images/projects-covers/AQL.png"
+        type="article"
+      />
     <ProjectDetailLayout title={t('projects.aql.title')} technologies={technologies}>
       <div className="image-and-description">
         <img src="/images/projects-covers/AQL.png" alt={t('projects.aql.title')} />
@@ -30,5 +41,6 @@ export default function ProjectAQL() {
         </div>
       </div>
     </ProjectDetailLayout>
+    </>
   )
 }

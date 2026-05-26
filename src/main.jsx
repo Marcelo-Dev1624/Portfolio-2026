@@ -1,6 +1,7 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 import { BrowserRouter } from 'react-router-dom'
+import { HelmetProvider } from 'react-helmet-async'
 import App from './App.jsx'
 import ScrollToTop from './components/ScrollToTop.jsx'
 import './i18n' // initialize i18next before any component renders
@@ -34,9 +35,11 @@ import './styles/responsive/tablet.css'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <BrowserRouter>
-      <ScrollToTop />  {/* <- agregar */}
-      <App />
-    </BrowserRouter>
+    <HelmetProvider>
+      <BrowserRouter>
+        <ScrollToTop />
+        <App />
+      </BrowserRouter>
+    </HelmetProvider>
   </React.StrictMode>
 )

@@ -1,5 +1,8 @@
 import { Trans, useTranslation } from 'react-i18next'
 import ProjectDetailLayout from '../ProjectDetailLayout'
+import SEO from '../../components/SEO'
+
+const stripHtml = (s) => s.replace(/<[^>]+>/g, '').replace(/\s+/g, ' ').trim().slice(0, 200)
 
 const technologies = [
   { src: '/images/technologies/html.png', alt: 'HTML' },
@@ -10,6 +13,14 @@ const technologies = [
 export default function ProjectAestheticClock() {
   const { t } = useTranslation()
   return (
+    <>
+      <SEO
+        title={t('projects.aesthetic-clock.title')}
+        description={stripHtml(t('projects.aesthetic-clock.cardDescription'))}
+        path="/projects/aesthetic-clock"
+        image="/images/projects-covers/aesthethic-clock.png"
+        type="article"
+      />
     <ProjectDetailLayout title={t('projects.aesthetic-clock.title')} technologies={technologies}>
       <div className="image-and-description">
         <img src="/images/projects-covers/aesthethic-clock.png" alt={t('projects.aesthetic-clock.title')} />
@@ -42,5 +53,6 @@ export default function ProjectAestheticClock() {
         </div>
       </div>
     </ProjectDetailLayout>
+    </>
   )
 }
