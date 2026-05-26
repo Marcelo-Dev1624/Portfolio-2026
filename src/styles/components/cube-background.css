@@ -7,6 +7,9 @@
  *   --cube-opacity  → peak opacity during visible phase
  *   --cube-scale    → max scale at end of growth
  *   --cube-rotate   → base rotation angle
+ *
+ * `--cube-scale-max` (set on the container) clamps the peak scale so cubes
+ * don't dominate small viewports.
  */
 
 .cube-bg {
@@ -18,6 +21,7 @@
   pointer-events: none;
   z-index: 0;
   overflow: hidden;
+  --cube-scale-max: 99;   /* desktop: effectively no cap */
 }
 
 .cube-bg__cube {
@@ -29,8 +33,15 @@
 }
 
 @keyframes cube-appear {
-  0%   { opacity: 0;                     transform: scale(0)                   rotate(0deg); }
-  25%  { opacity: var(--cube-opacity);   transform: scale(1)                   rotate(calc(var(--cube-rotate) * 0.3)); }
-  75%  { opacity: var(--cube-opacity);   transform: scale(var(--cube-scale))   rotate(var(--cube-rotate)); }
-  100% { opacity: 0;                     transform: scale(var(--cube-scale))   rotate(calc(var(--cube-rotate) * 1.6)); }
+  0%   { opacity: 0;                     transform: scale(0)                                                rotate(0deg); }
+  25%  { opacity: var(--cube-opacity);   transform: scale(1)                                                rotate(calc(var(--cube-rotate) * 0.3)); }
+  75%  { opacity: var(--cube-opacity);   transform: scale(min(var(--cube-scale), var(--cube-scale-max)))    rotate(var(--cube-rotate)); }
+  100% { opacity: 0;                     transform: scale(min(var(--cube-scale), var(--cube-scale-max)))    rotate(calc(var(--cube-rotate) * 1.6)); }
+}
+
+/* Mobile: cap peak scale so cubes stay small relative to viewport */
+@media only screen and (max-width: 767px) {
+  .cube-bg {
+    --cube-scale-max: 2.5;
+  }
 }
