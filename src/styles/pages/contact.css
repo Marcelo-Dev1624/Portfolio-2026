@@ -97,9 +97,9 @@
   border-radius: 15px;
   padding: 0;
   overflow: hidden;
-  min-height: 640px;
-  height: 70vh;
-  max-height: 800px;
+  min-height: 560px;
+  height: 65vh;
+  max-height: 720px;
 }
 
 .cal-embed-wrap {
@@ -238,7 +238,7 @@
 /* Socials with ring effect */
 .contact-v2-socials {
   display: flex;
-  gap: 1.5rem;
+  gap: 1rem;
 }
 
 .contact-v2-socials .social-media-icon {
@@ -249,6 +249,7 @@
   cursor: pointer;
   width: 55px;
   height: 55px;
+  flex-shrink: 0;
   border-radius: 50%;
   color: var(--accent-color);
   transition: var(--transition-normal);
