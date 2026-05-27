@@ -21,15 +21,25 @@ export function useNavBehavior() {
 
   const updateActiveSection = useCallback(() => {
     const sections = document.querySelectorAll('.section')
+    if (!sections.length) return
     const currentScroll = window.scrollY
+    let matched = null
     sections.forEach((section) => {
       const top = section.offsetTop - window.innerHeight / 2
       const bottom = section.offsetTop + section.offsetHeight - window.innerHeight / 2
       if (currentScroll >= top && currentScroll < bottom) {
-        setActiveSection(section.id)
-        localStorage.setItem('activeSectionId', section.id)
+        matched = section.id
       }
     })
+    // Fallback: above first section → use first; below last → use last
+    if (!matched) {
+      const first = sections[0]
+      const last = sections[sections.length - 1]
+      if (currentScroll < first.offsetTop) matched = first.id
+      else matched = last.id
+    }
+    setActiveSection(matched)
+    localStorage.setItem('activeSectionId', matched)
   }, [])
 
   const scheduleCompact = useCallback(() => {
@@ -57,10 +67,16 @@ export function useNavBehavior() {
     }
     window.addEventListener('scroll', handleScroll, { passive: true })
     window.addEventListener('resize', updateActiveSection)
-    document.addEventListener('DOMContentLoaded', updateActiveSection)
+    // Sync indicator with real scroll position on mount (covers reload / direct nav)
+    updateActiveSection()
+    // Re-check after layout settles (images, fonts, async content shifting offsets)
+    const rafId = requestAnimationFrame(updateActiveSection)
+    const timeoutId = setTimeout(updateActiveSection, 300)
     return () => {
       window.removeEventListener('scroll', handleScroll)
       window.removeEventListener('resize', updateActiveSection)
+      cancelAnimationFrame(rafId)
+      clearTimeout(timeoutId)
       if (compactTimerRef.current) clearTimeout(compactTimerRef.current)
     }
   }, [updateActiveSection, cancelCompact, scheduleCompact])
@@ -70,10 +86,10 @@ export function useNavBehavior() {
     if (location.pathname === '/contact') setActiveSection('Contact')
     else if (location.pathname === '/projects') setActiveSection('Projects')
     else if (location.pathname === '/') {
-      const stored = localStorage.getItem('activeSectionId')
-      setActiveSection(stored || 'Home')
+      // Compute from actual scroll position rather than stale localStorage
+      updateActiveSection()
     }
-  }, [location.pathname])
+  }, [location.pathname, updateActiveSection])
 
   const handleMenuItemClick = useCallback((sectionId) => {
     setActiveSection(sectionId)

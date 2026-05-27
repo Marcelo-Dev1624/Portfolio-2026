@@ -29,7 +29,7 @@ export default function CalEmbed() {
           },
         },
         hideEventTypeDetails: false,
-        layout: 'month_view',
+        layout: 'column_view',
       })
     })()
     return () => { mounted = false }
@@ -41,7 +41,7 @@ export default function CalEmbed() {
         namespace="30min"
         calLink="marcelo-dev-rgpn5p/30min"
         style={{ width: '100%', height: '100%', overflow: 'scroll' }}
-        config={{ layout: 'month_view', theme: 'dark' }}
+        config={{ layout: 'column_view', theme: 'dark' }}
       />
     </div>
   )
